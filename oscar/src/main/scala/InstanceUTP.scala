@@ -38,7 +38,7 @@ case class data(
                  room_capacity: Seq[Int],
                  part_room_use: Seq[String],
                  nr_part_room_mandatory: Int,
-                 part_room_mandatory: Seq[Int],
+                 part_room_mandatory: Seq[Seq[Int]],
                  part_teacher_sessions_count: Seq[Seq[Int]],
                  part_session_teacher_count: Seq[Int],
                  class_maxheadcount: Seq[Int],
@@ -79,7 +79,7 @@ case class rules(
                   parameter_type: Seq[String],
                   max_parameter_value: Int,
                   max_parameter_size: Int,
-                  parameter_value: Seq[Seq[JsValue]]
+                  parameter_value: Seq[Seq[Any]]
                 )
 
 case class groups(
@@ -176,7 +176,7 @@ object MyJsonProtocol extends DefaultJsonProtocol {
         fields("room_capacity").convertTo[Seq[Int]],
         fields("part_room_use").convertTo[Seq[String]],
         fields("nr_part_room_mandatory").convertTo[Int],
-        fields("part_room_mandatory").convertTo[Seq[Int]],
+        fields("part_room_mandatory").convertTo[Seq[Seq[Int]]],
         fields("part_teacher_sessions_count").convertTo[Seq[Seq[Int]]],
         fields("part_session_teacher_count").convertTo[Seq[Int]],
         fields("class_maxheadcount").convertTo[Seq[Int]],
