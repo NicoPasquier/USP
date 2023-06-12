@@ -14,6 +14,7 @@ lazy val root = (project in file(".")) // has to be named root.
   .settings(unidocProjectFilter in(ScalaUnidoc, unidoc) := inAnyProject -- inProjects(oscarFzn, oscarFznCbls, oscarFznCp, oscarPerf))
   .enablePlugins(PackPlugin)
   .settings(PackPlugin.packSettings)
+  .dependsOn(oscarCbls)
 
 
 lazy val oscarAlgebra = (project in file("oscar-algebra"))
