@@ -3,7 +3,7 @@ package oscar
 import oscar.cbls.algo.search.InstrumentedRange
 import oscar.cbls.core.computation._
 import oscar.cbls.core.search.{NeighborhoodCombinator, Neighborhood}
-import oscar.cbls.lib.constraint.{EQ, GE, LE, NE}
+import oscar.cbls.lib.constraint.{EQ, GE, LE, NE, n_EQ}
 import oscar.cbls.lib.invariant.logic._
 import oscar.cbls.lib.invariant.numeric._
 import oscar.cbls.lib.invariant.set._
@@ -166,7 +166,8 @@ package object cbls extends ModelingAPI{
     def le(b:IntValue) = LE(x,b)
     def ge(b:IntValue) = GE(x,b)
 
-    def ===(b:IntValue) = EQ(x,b)
+//    def ===(b:IntValue) = EQ(x,b)
+    def ===(b:IntValue) = n_EQ(x,b)
     def !==(b:IntValue) = NE(x,b)
     //we do not use the infix notation for comparison operators
     // because they are ambiguous with the <== operation of CBLS that is the "follows" operator)

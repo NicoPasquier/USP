@@ -212,6 +212,7 @@ case class Disjunctive(start: Array[IntValue],
         violationVarsArray(taskID) :+= deltaViolation
         violationVarsArray(otherTaskID) :+= deltaViolation
         violationVar :+= deltaViolation
+//        violationVar := 1
       }
     }
   }

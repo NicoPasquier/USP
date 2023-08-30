@@ -61,18 +61,47 @@ protected class LEA(val left: IntValue, val right: IntValue) extends Constraint 
   }
 }
 
+protected class n_LEA(left: IntValue, right: IntValue) extends Invariant with Constraint with IntNotificationTarget {
+  registerConstrainedVariables(left, right)
+  registerStaticAndDynamicDependenciesNoID(left, right)
+  finishInitialization()
+
+  /** the violation is 0 if the variables are equal, 1 otherwise */
+  override val violation: CBLSIntVar = CBLSIntVar(model, if (left.value <= right.value) 0 else 1, 0 to 1, "inférieur ou equals")
+
+  violation.setDefiningInvariant(this)
+
+  @inline
+  override def notifyIntChanged(v: ChangingIntValue, id: Int, OldVal: Int, NewVal: Int): Unit = {
+    violation := (if (left.value <= right.value) 0 else 1)
+  }
+
+  /** the violation is 0 if the variables are equal, 1 otherwise */
+  override def violation(v: Value): IntValue = {
+    if (left == v || right == v) violation else 1
+  }
+
+  override def checkInternals(c: Checker): Unit = {
+    c.check(violation.value == (if (left.value <= right.value) 0 else 1),
+      Some("Violation.value (" + violation.value
+        + ") == (if (left.value (" + left.value + ") == right.value (" + right.value + ")) 1 else 0)"))
+  }
+}
+
 /**
  * implements left <= right
  * @author  Renaud De Landtsheer rdl@cetic.be
  */
-case class LE(l: IntValue, r: IntValue) extends LEA(l, r)
+//case class LE(l: IntValue, r: IntValue) extends LEA(l, r)
+case class LE(l: IntValue, r: IntValue) extends n_LEA(l, r)
 
 /**
  * implements left >= right
  * it is just a parameter swap of [[LE]]
  * @author renaud.delandtsheer@cetic.be
  */
-case class GE(l: IntValue, r: IntValue) extends LEA(r, l)
+//case class GE(l: IntValue, r: IntValue) extends LEA(r, l)
+case class GE(l: IntValue, r: IntValue) extends n_LEA(r, l)
 
 /**
  * implements left < right
@@ -102,18 +131,47 @@ protected class LA(val left: IntValue, val right: IntValue) extends Constraint {
   }
 }
 
+protected class n_LA(left: IntValue, right: IntValue) extends Invariant with Constraint with IntNotificationTarget {
+  registerConstrainedVariables(left, right)
+  registerStaticAndDynamicDependenciesNoID(left, right)
+  finishInitialization()
+
+  /** the violation is 0 if the variables are equal, 1 otherwise */
+  override val violation: CBLSIntVar = CBLSIntVar(model, if (left.value < right.value) 0 else 1, 0 to 1, "equals")
+
+  violation.setDefiningInvariant(this)
+
+  @inline
+  override def notifyIntChanged(v: ChangingIntValue, id: Int, OldVal: Int, NewVal: Int): Unit = {
+    violation := (if (left.value < right.value) 0 else 1)
+  }
+
+  /** the violation is 0 if the variables are equal, 1 otherwise */
+  override def violation(v: Value): IntValue = {
+    if (left == v || right == v) violation else 1
+  }
+
+  override def checkInternals(c: Checker): Unit = {
+    c.check(violation.value == (if (left.value < right.value) 0 else 1),
+      Some("Violation.value (" + violation.value
+        + ") == (if (left.value (" + left.value + ") == right.value (" + right.value + ")) 1 else 0)"))
+  }
+}
+
 /**
  * implements left < right
  * it is just a parameter swap of [[L]]
  * @author renaud.delandtsheer@cetic.be
  */
-case class L(l: IntValue, r: IntValue) extends LA(l, r)
+//case class L(l: IntValue, r: IntValue) extends LA(l, r)
+case class L(l: IntValue, r: IntValue) extends n_LA(l, r)
 
 /**
  * implements left > right
  * @author  Renaud De Landtsheer rdl@cetic.be
  */
-case class G(l: IntValue, r: IntValue) extends LA(r, l)
+//case class G(l: IntValue, r: IntValue) extends LA(r, l)
+case class G(l: IntValue, r: IntValue) extends n_LA(r, l)
 
 /**
  * implements left != right
@@ -164,6 +222,33 @@ case class EQ(left: IntValue, right: IntValue) extends Constraint {
       Some("Violation.value (" + violation.value
         + ") == (if (left.value (" + left.value + ") == right.value (" + right.value
         + ")) 0 else " + myViolation + ")"))
+  }
+}
+
+case class n_EQ(left: IntValue, right: IntValue) extends Invariant with Constraint with IntNotificationTarget {
+  registerConstrainedVariables(left, right)
+  registerStaticAndDynamicDependenciesNoID(left, right)
+  finishInitialization()
+
+  /** the violation is 0 if the variables are equal, 1 otherwise */
+  override val violation: CBLSIntVar = CBLSIntVar(model, if (left.value == right.value) 0 else 1, 0 to 1, "equals")
+
+  violation.setDefiningInvariant(this)
+
+  @inline
+  override def notifyIntChanged(v: ChangingIntValue, id: Int, OldVal: Int, NewVal: Int): Unit = {
+    violation := (if (left.value == right.value) 0 else 1)
+  }
+
+  /** the violation is 0 if the variables are equal, 1 otherwise */
+  override def violation(v: Value): IntValue = {
+    if (left == v || right == v) violation else 1
+  }
+
+  override def checkInternals(c: Checker): Unit = {
+    c.check(violation.value == (if (left.value == right.value) 0 else 1),
+      Some("Violation.value (" + violation.value
+        + ") == (if (left.value (" + left.value + ") == right.value (" + right.value + ")) 1 else 0)"))
   }
 }
 

@@ -2,4 +2,11 @@
 
 cd USP-cbls
 
-sbt "runMain USP.Test $1 $2"
+command="runMain USP.Test"
+
+for var in $@
+do
+    command="${command} ${var}"
+done 
+
+sbt "$command"

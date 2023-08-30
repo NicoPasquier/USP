@@ -2,8 +2,6 @@ package USP
 
 // library spray-json: https://github.com/spray/spray-json
 import spray.json._
-import DefaultJsonProtocol._
-import oscar.cbls._
 
 case class set(set: List[Int])
 
@@ -11,6 +9,10 @@ case class data(
                  nr_weeks: Int,
                  nr_days_per_week: Int,
                  nr_slots_per_day: Int,
+                 interval: Seq[Int],
+                 abstract_grid: Int,
+                 grid: Seq[Any],
+                 grids: Seq[Seq[Int]],
                  nr_courses: Int,
                  nr_parts: Int,
                  course_parts: Seq[set],
@@ -30,7 +32,9 @@ case class data(
                  part_dailyslots: Seq[set],
                  part_days: Seq[set],
                  part_weeks: Seq[set],
-                 part_session_lengt: Seq[Int],
+                 part_bool_grid: Seq[Int],
+                 part_abstract_grid: Seq[Seq[Any]],
+                 part_session_length: Seq[Int],
                  max_equipment_count: Int,
                  max_class_maxheadcount: Int,
                  max_teacher_session: Int,
@@ -149,6 +153,10 @@ object MyJsonProtocol extends DefaultJsonProtocol {
         fields("nr_weeks").convertTo[Int],
         fields("nr_days_per_week").convertTo[Int],
         fields("nr_slots_per_day").convertTo[Int],
+        fields("interval").convertTo[Seq[Int]],
+        fields("abstract_grid").convertTo[Int],
+        fields("grid").convertTo[Seq[JsValue]],
+        fields("grids").convertTo[Seq[Seq[Int]]],
         fields("nr_courses").convertTo[Int],
         fields("nr_parts").convertTo[Int],
         fields("course_parts").convertTo[Seq[set]],
@@ -168,6 +176,8 @@ object MyJsonProtocol extends DefaultJsonProtocol {
         fields("part_dailyslots").convertTo[Seq[set]],
         fields("part_days").convertTo[Seq[set]],
         fields("part_weeks").convertTo[Seq[set]],
+        fields("part_bool_grid").convertTo[Seq[Int]],
+        fields("part_abstract_grid").convertTo[Seq[Seq[JsValue]]],
         fields("part_session_length").convertTo[Seq[Int]],
         fields("max_equipment_count").convertTo[Int],
         fields("max_class_maxheadcount").convertTo[Int],

@@ -65,6 +65,10 @@ case class ConstraintSystem(model:Store) extends Constraint with Objective{
       nSpace(indent+4) + displayedConstraintsString  + ")"
   }
 
+//  def remove(index: Int): Unit = {
+//    this.PostedConstraints = this.PostedConstraints.patch(index, List.empty, 1)
+//  }
+
   /**
    * @return the constraints posted in the constraint system, together with their weighting factor.
    */
