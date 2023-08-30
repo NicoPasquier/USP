@@ -1,0 +1,19 @@
+= : ======================= : = 
+name : /home/etud/USP/USP/instance/m2_NP/solution_ua_m2-informatique-s1-s2-NP_extension_v2_160823_22_32_32.xml 
+nr_courses : 20 
+nr_part : 42 
+nr_classe : 46 
+nr_sessions : 200 
+mean_sessions_per_classe : 4.3478260869565 
+nr_group : 3 
+nr_student : 27 
+mean_classes_per_groups : 32 
+nr_slot : 172800 
+nr_room : 107 
+nr_room_used : 28 
+nr_teacher : 28 
+nr_teacher_used : 28 
+nr_rules : 75 
+nr_flatten_constraint : 396 
+different_occurence_constraint : noOverlap 138, sequenced 67, teacherService 42, sameWeeklySlot 38, sameTeachers 2, forbiddenPeriod 94, allowedPeriod 8, differentWeek 2, sameWeekDay 3, periodic 2 
+nr_different_constraint : 10 

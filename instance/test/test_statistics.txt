@@ -1,0 +1,19 @@
+= : ======================= : = 
+name : /home/etud/USP/USP/instance/test.xml 
+nr_courses : 2 
+nr_part : 2 
+nr_classe : 2 
+nr_sessions : 4 
+mean_sessions_per_classe : 2 
+nr_group : 1 
+nr_student : 1 
+mean_classes_per_groups : 2 
+nr_slot : 14400 
+nr_room : 1 
+nr_room_used : 1 
+nr_teacher : 1 
+nr_teacher_used : 1 
+nr_rules : 3 
+nr_flatten_constraint : 3 
+different_occurence_constraint : assign_slot 1, sequenced 1, periodic 1 
+nr_different_constraint : 3 

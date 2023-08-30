@@ -1,0 +1,206 @@
+{
+"PADDING":
+{
+"padding_value" : [0,-1],
+"padding_name_value" : ["paddingUnknowValue","paddingImpossibleValue"],
+"padding_set" : [{"set" :[0]},{"set" :[-1]}],
+"padding_name_set" : ["paddingUnknowSet","paddingImpossibleSet"]
+},
+"DATA":
+{
+"nr_weeks" : 3,
+"nr_days_per_week" : 5,
+"nr_slots_per_day" : 1440,
+"interval" : [1,1440],
+"abstract_grid" : 1,
+"grid" : [540,101000,"0.002970297029703"],
+"grids" : [[540,300,2]],
+"nr_courses" : 1,
+"nr_parts" : 2,
+"course_parts" : [{"set" :[1,2]}],
+"nr_classes" : 2,
+"part_classes" : [{"set" :[1]},{"set" :[2]}],
+"nr_sessions" : 3,
+"max_part_sessions" : 2,
+"part_nr_sessions" : [2,1],
+"nr_equipments" : 0,
+"nr_rooms" : 1,
+"nr_teachers" : 1,
+"nr_students" : 1,
+"nr_part_rooms" : 1,
+"part_rooms" : [{"set" :[1]},{"set" :[1]}],
+"nr_part_teachers" : 1,
+"part_teachers" : [{"set" :[1]},{"set" :[1]}],
+"part_dailyslots" : [{"set" :[540,840]},{"set" :[540,840]}],
+"part_days" : [{"set" :[1,2,3,4,5]},{"set" :[1,2,3,4,5]}],
+"part_weeks" : [{"set" :[1,2]},{"set" :[1,2]}],
+"part_bool_grid" : [1,1],
+"part_abstract_grid" : [[1,"0.002970297029703",2],[1,"0.002970297029703",2]],
+"part_session_length" : [180,180],
+"max_equipment_count" : 0,
+"max_class_maxheadcount" : 0,
+"max_teacher_session" : 1,
+"max_teacher_sessions" : 2,
+"equipment_count" : [],
+"max_room_capacity" : 50,
+"room_capacity" : [50],
+"part_room_use" : ["single","single"],
+"nr_part_room_mandatory" : 0,
+"part_room_mandatory" : [],
+"part_teacher_sessions_count" : [[2],[1]],
+"part_session_teacher_count" : [1,1],
+"class_maxheadcount" : [0,0],
+"class_parent" : [0,0],
+"student_courses" : [{"set" :[1]}],
+"equipment_name" : [],
+"room_name" : ["room-1"],
+"teacher_name" : ["teacher-1"],
+"student_name" : ["student-1"],
+"course_name" : ["course-1"],
+"part_name" : ["course-1-CM","course-1-TD"],
+"class_name" : ["course-1-CM-1","course-1-TD-1"],
+"nr_labels" : 3,
+"label_name" : ["","CM","TD"],
+"room_label" : [{"set" :[]}],
+"teacher_label" : [{"set" :[]}],
+"student_label" : [{"set" :[]}],
+"course_label" : [{"set" :[]}],
+"part_label" : [{"set" :[2]},{"set" :[3]}]
+},
+"RULES":
+{
+"nr_rules" : 6,
+"nr_scopes" : 7,
+"rule_scopes" : [{"set" :[1]},{"set" :[2]},{"set" :[3]},{"set" :[4]},{"set" :[5]},{"set" :[6,7]}],
+"scope_type" : ["student","lecturer","room","class","part","class","class"],
+"mask_length" : 1,
+"scope_mask" : [{"set" :[]},{"set" :[]},{"set" :[]},{"set" :[]},{"set" :[]},{"set" :[2]},{"set" :[1]}],
+"nr_filters" : 2,
+"scope_filters" : [{"set" :[]},{"set" :[]},{"set" :[]},{"set" :[]},{"set" :[]},{"set" :[1]},{"set" :[2]}],
+"filter_type" : ["part","part"],
+"filter_elements" : [{"set" :[1]},{"set" :[2]}],
+"rule_constraint" : ["no_overlap","no_overlap","no_overlap","sequenced","teacher_service","sequenced"],
+"constraint_hardness" : ["hard","hard","hard","hard","hard","hard"],
+"nr_parameters" : 0,
+"constraint_parameters" : [{"set" :[]},{"set" :[]},{"set" :[]},{"set" :[]},{"set" :[]},{"set" :[]}],
+"parameter_name" : [],
+"parameter_type" : [],
+"max_paramater_value" : 0,
+"max_parameter_size" : 0,
+"parameter_value" : []
+},
+"SOLUTION":
+{
+"GROUPS":
+{
+"nr_groups" : 1,
+"max_group_headcount" : 1,
+"group_headcount" : [1],
+"group_name" : ["group-1"],
+"group_students" : [{"set" :[1]}],
+"group_classes" : [{"set" :[1,2]}],
+"group_sessions" : [{"set" :[1,2,3]}]
+},
+"CLASS":
+{
+"class_teachers" : [],
+"class_rooms" : [],
+"class_groups" : [[{"set" :[1]},{"set" :[1]}],[{"set" :[2]},{"set" :[1]}]]
+},
+"SESSIONS":
+{
+"session_rank" : [1,2,1],
+"session_class" : [1,1,2],
+"session_dailyslot" : [540,840,540],
+"session_day" : [1,1,2],
+"session_week" : [1,1,1],
+"session_rooms" : [{"set" :[1]},{"set" :[1]},{"set" :[1]}],
+"session_teachers" : [{"set" :[1]},{"set" :[1]},{"set" :[1]}]
+}
+
+},
+"CONSTRAINTS" :
+ [
+{
+"rule" : 1,
+"constraint" : "noOverlap",
+"hardness" : "hard",
+"arity" : 1,
+"type" : ["student"],
+"elements" : [1],
+"sessions" : [{"set" :[1,2,3]}],
+"parameters" : []
+},
+{
+"rule" : 2,
+"constraint" : "noOverlap",
+"hardness" : "hard",
+"arity" : 1,
+"type" : ["lecturer"],
+"elements" : [1],
+"sessions" : [{"set" :[1,2,3]}],
+"parameters" : []
+},
+{
+"rule" : 3,
+"constraint" : "noOverlap",
+"hardness" : "hard",
+"arity" : 1,
+"type" : ["room"],
+"elements" : [1],
+"sessions" : [{"set" :[1,2,3]}],
+"parameters" : []
+},
+{
+"rule" : 4,
+"constraint" : "sequenced",
+"hardness" : "hard",
+"arity" : 1,
+"type" : ["class"],
+"elements" : [1],
+"sessions" : [{"set" :[1,2]}],
+"parameters" : []
+},
+{
+"rule" : 4,
+"constraint" : "sequenced",
+"hardness" : "hard",
+"arity" : 1,
+"type" : ["class"],
+"elements" : [2],
+"sessions" : [{"set" :[3]}],
+"parameters" : []
+},
+{
+"rule" : 5,
+"constraint" : "teacherService",
+"hardness" : "hard",
+"arity" : 1,
+"type" : ["part"],
+"elements" : [1],
+"sessions" : [{"set" :[1,2]}],
+"parameters" : []
+},
+{
+"rule" : 5,
+"constraint" : "teacherService",
+"hardness" : "hard",
+"arity" : 1,
+"type" : ["part"],
+"elements" : [2],
+"sessions" : [{"set" :[3]}],
+"parameters" : []
+},
+{
+"rule" : 6,
+"constraint" : "sequenced",
+"hardness" : "hard",
+"arity" : 2,
+"type" : ["class","class"],
+"elements" : [1,2],
+"sessions" : [{"set" :[2]},{"set" :[3]}],
+"parameters" : []
+}
+]
+
+}

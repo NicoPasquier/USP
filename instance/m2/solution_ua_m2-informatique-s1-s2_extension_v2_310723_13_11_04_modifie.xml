@@ -1,0 +1,4640 @@
+<!-- 
+<calendar>
+    <startingYear>2023</startingYear>
+    <weeks>1-34</weeks>
+    <weekDays>1-5</weekDays>
+</calendar>
+ -->
+<timetabling xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="usp_timetabling_v1_2.xsd" name="ua_m2-informatique-s1-s2" nrWeeks="24" nrDaysPerWeek="5" nrSlotsPerDay="1440">
+<rooms>
+<!-- file rooms_sciences.xml -->
+<room id="Amphi-A" capacity="90" label="Bât.A,Amphithéâtre,Amphithéâtre" />
+<room id="Amphi-B" capacity="286" label="Bât.A,Amphithéâtre,Amphithéâtre" />
+<room id="Amphi-D" capacity="296" label="Bât.A,Amphithéâtre,Amphithéâtre" />
+<room id="Amphi-E" capacity="182" label="Bât.A,Amphithéâtre,Amphithéâtre" />
+<room id="Amphi-L001" capacity="100" label="Bât.L,Amphithéâtre,Amphithéâtre" />
+<room id="Amphi-L002" capacity="200" label="Bât.L,Amphithéâtre,Amphithéâtre" />
+<room id="Amphi-L003" capacity="100" label="Bât.L,Amphithéâtre,Amphithéâtre" />
+<room id="Amphi-L004" capacity="150" label="Bât.L,Amphithéâtre,Amphithéâtre" />
+<room id="Amphi-L005" capacity="150" label="Bât.L,Amphithéâtre,Amphithéâtre" />
+<room id="Amphi-L006" capacity="200" label="Bât.L,Amphithéâtre,Amphithéâtre" />
+<room id="A018" capacity="40" label="Bât.A,Salle,réunion/cours" />
+<room id="A020" capacity="20" label="Bât.A,Salle,réunion/cours" />
+<room id="A115" capacity="20" label="Bât.A',Salle,Informatique" />
+<room id="A116" capacity="40" label="Bât.A',Salle,Cours / TD" />
+<room id="A117" capacity="40" label="Bât.A',Salle,Cours / TD" />
+<room id="A118" capacity="30" label="Bât.A',Salle,Cours / TD" />
+<room id="A119" capacity="30" label="Bât.A',Salle,Cours / TD" />
+<room id="A120" capacity="40" label="Bât.A',Salle,Cours / TD" />
+<room id="B002" capacity="20" label="Bât.B,Salle,Travaux pratiques" />
+<room id="B003" capacity="20" label="Bât.B,Salle,Travaux pratiques" />
+<room id="B005" capacity="20" label="Bât.B,Salle,Travaux pratiques" />
+<room id="B006" capacity="22" label="Bât.B,Salle,Travaux pratiques" />
+<room id="B'107" capacity="24" label="Bât.B',Salle,Travaux pratiques" />
+<room id="B'108" capacity="20" label="Bât.B',Salle,Travaux pratiques" />
+<room id="C002" capacity="40" label="Bât.C,Salle,Travaux pratiques" />
+<room id="C004" capacity="40" label="Bât.C,Salle,Travaux pratiques" />
+<room id="D003" capacity="20" label="Bât.D,Salle,Travaux pratiques" />
+<room id="D005" capacity="20" label="Bât.D,Salle,Travaux pratiques" />
+<room id="Da001" capacity="12" label="Bât.Da,Salle,Travaux pratiques" />
+<room id="Da003" capacity="12" label="Bât.Da,Salle,Travaux pratiques" />
+<room id="Da004" capacity="16" label="Bât.Da,Salle,Travaux pratiques" />
+<room id="Da005" capacity="20" label="Bât.Da,Salle,Travaux pratiques" />
+<room id="Da101" capacity="29" label="Bât.Da,Salle,Cours / TD" />
+<room id="Da102" capacity="20" label="Bât.Da,Salle,Travaux pratiques" />
+<room id="Da107" capacity="24" label="Bât.Da,Salle,Cours / TD" />
+<room id="Da106" capacity="10" label="Bât.Da,Salle,Travaux pratiques" />
+<room id="Da201" capacity="24" label="Bât.Da,Salle,Travaux pratiques" />
+<room id="Da207" capacity="18" label="Bât.Da,Salle,Cours / TD" />
+<room id="E001" capacity="20" label="Bât.E,Salle,Travaux pratiques" />
+<room id="E002" capacity="20" label="Bât.E,Salle,Travaux pratiques" />
+<room id="F001" capacity="22" label="Bât.F,Salle,Travaux pratiques" />
+<room id="F002" capacity="22" label="Bât.F,Salle,Travaux pratiques" />
+<room id="F003" capacity="20" label="Bât.F,Salle,Travaux pratiques" />
+<room id="F004" capacity="20" label="Bât.F,Salle,Travaux pratiques" />
+<room id="F101" capacity="16" label="Bât.F,Salle,Travaux pratiques" />
+<room id="F102" capacity="26" label="Bât.F,Salle,Travaux pratiques" />
+<room id="G001" capacity="20" label="Bât.G,Salle,Travaux pratiques" />
+<room id="G002" capacity="20" label="Bât.G,Salle,Travaux pratiques" />
+<room id="G003" capacity="25" label="Bât.G,Salle,Travaux pratiques" />
+<room id="G101" capacity="20" label="Bât.G,Salle,Informatique" />
+<room id="G102" capacity="20" label="Bât.G,Salle,Informatique" />
+<room id="G103" capacity="20" label="Bât.G,Salle,Informatique" />
+<room id="G104" capacity="20" label="Bât.G,Salle,Informatique" />
+<room id="G105" capacity="16" label="Bât.G,Salle,Informatique" />
+<room id="G204" capacity="20" label="Bât.G,Salle,Informatique" />
+<room id="G205" capacity="24" label="Bât.G,Salle,Informatique" />
+<room id="H001" capacity="20" label="Bât.H,Salle,Informatique" />
+<room id="H002" capacity="42" label="Bât.H,Salle,Informatique" />
+<room id="H003" capacity="38" label="Bât.H,Salle,Informatique" />
+<room id="H004" capacity="38" label="Bât.H,Salle,Informatique" />
+<room id="H005" capacity="12" label="Bât.H,Salle,Informatique" />
+<room id="H006" capacity="35" label="Bât.H,Salle,Informatique" />
+<room id="H007-H008" capacity="36" label="Bât.H,Salle,Informatique" />
+<room id="H113" capacity="16" label="Bât.H,Salle,Informatique" />
+<room id="H217" capacity="20" label="Bât.H,Salle,Cours / TD" />
+<room id="I001" capacity="36" label="Bât.I,Salle,Cours / TD" />
+<room id="I002" capacity="44" label="Bât.I,Salle,Cours / TD" />
+<room id="I003" capacity="44" label="Bât.I,Salle,Cours / TD" />
+<room id="I004" capacity="48" label="Bât.I,Salle,Cours / TD" />
+<room id="I005" capacity="44" label="Bât.I,Salle,Cours / TD" />
+<room id="I006" capacity="40" label="Bât.I,Salle,Cours / TD" />
+<room id="I008" capacity="21" label="Bât.I,Salle,Cours / TD" />
+<room id="I109" capacity="12" label="Bât.I,Salle,Informatique" />
+<room id="J004" capacity="20" label="Bât.J,Salle,Travaux pratiques" />
+<room id="J005" capacity="20" label="Bât.J,Salle,Travaux pratiques" />
+<room id="J104" capacity="20" label="Bât.J,Salle,Travaux pratiques" />
+<room id="J105" capacity="20" label="Bât.J,Salle,Travaux pratiques" />
+<room id="LS01" capacity="171" label="Bât.L,Salle,Examen" />
+<room id="L101" capacity="44" label="Bât.L,Salle,Cours / TD" />
+<room id="L102" capacity="46" label="Bât.L,Salle,Cours / TD" />
+<room id="L103" capacity="46" label="Bât.L,Salle,Cours / TD" />
+<room id="L104" capacity="44" label="Bât.L,Salle,Cours / TD" />
+<room id="L105" capacity="44" label="Bât.L,Salle,Cours / TD" />
+<room id="L106" capacity="37" label="Bât.L,Salle,Cours / TD" />
+<room id="L107" capacity="46" label="Bât.L,Salle,Cours / TD" />
+<room id="L108" capacity="40" label="Bât.L,Salle,Informatique" />
+<room id="L201" capacity="46" label="Bât.L,Salle,Cours / TD" />
+<room id="L202" capacity="46" label="Bât.L,Salle,Cours / TD" />
+<room id="L203" capacity="48" label="Bât.L,Salle,Cours / TD" />
+<room id="L204" capacity="46" label="Bât.L,Salle,Cours / TD" />
+<room id="L205" capacity="48" label="Bât.L,Salle,Cours / TD" />
+<room id="L206" capacity="28" label="Bât.L,Salle,Cours / TD" />
+<room id="L207" capacity="24" label="Bât.L,Salle,Cours / TD" />
+<room id="L208" capacity="24" label="Bât.L,Salle,Cours / TD" />
+<room id="L209" capacity="28" label="Bât.L,Salle,Cours / TD" />
+<room id="L210" capacity="48" label="Bât.L,Salle,Cours / TD" />
+<room id="L211" capacity="20" label="Bât.L,Salle,Informatique" />
+<room id="L212" capacity="16" label="Bât.L,Salle,Informatique" />
+<room id="L218" capacity="12" label="Bât.L,Salle,Informatique" />
+<room id="L219" capacity="12" label="Bât.L,Salle,Informatique" />
+<room id="L220" capacity="18" label="Bât.L,Salle,Informatique" />
+<room id="L221" capacity="32" label="Bât.L,Salle,Informatique" />
+<room id="L222" capacity="32" label="Bât.L,Salle,Informatique" />
+<room id="L229" capacity="18" label="Bât.L,Salle,Cours / TD" />
+<room id="L230" capacity="18" label="Bât.L,Salle,Cours / TD" />
+<room id="L231" capacity="18" label="Bât.L,Salle,Cours / TD" />
+<room id="L232" capacity="16" label="Bât.L,Salle,Cours / TD" />
+<!-- end file rooms_sciences.xml -->
+</rooms>
+<teachers>
+<!-- file teachers_m2-informatique.xml -->
+<teacher label="UFR-Sciences" id="RICHER Jean-Michel" />
+<teacher label="UFR-Sciences" id="LESAINT David" />
+<teacher label="UFR-Sciences" id="DUMONT Ingrid" />
+<teacher label="UFR-Sciences" id="HAO Jin-Kao" />
+<teacher label="UFR-Sciences" id="LEFEVRE Claire" />
+<teacher label="UFR-Sciences" id="GARCIA Laurent" />
+<teacher label="UFR-Sciences" id="STEPHAN Igor" />
+<teacher label="UFR-Sciences" id="AMGHAR Tassadit" />
+<teacher label="UFR-Sciences" id="DIGUEZ Martin" />
+<teacher label="UFR-Sciences" id="LEGEAY Marc" />
+<teacher label="UFR-Sciences" id="DUPIN Nicolas" />
+<teacher label="UFR-Sciences" id="GARREAU Fabien" />
+<teacher label="UFR-Sciences" id="HAMIEZ Jean-Phillipe" />
+<teacher label="UFR-Sciences" id="GUILLMER Y" />
+<teacher label="UFR-Sciences" id="SAUBION Frédéric" />
+<teacher label="UFR-Sciences" id="LARDEUX Frédéric" />
+<teacher label="UFR-Sciences" id="MONFROY Eric" />
+<teacher label="UFR-Sciences" id="MENAN Bruno" />
+<teacher label="UFR-Sciences" id="LAMPRIER Sylvain" />
+<teacher label="UFR-Sciences" id="GENEST David" />
+<teacher label="UFR-Sciences" id="LOISEAU Stephane" />
+<teacher label="UFR-Sciences" id="MAILLET Chloé" />
+<teacher label="UFR-Sciences" id="GRIMAULT Virginie" />
+<teacher label="UFR-Sciences" id="BLOT" />
+<teacher label="UFR-Sciences" id="Intervenant" />
+<teacher label="UFR-Sciences" id="Intervenant Thales" />
+<teacher label="UFR-Sciences" id="Intervenant CapGemini" /><!-- end file teachers_m2-informatique.xml -->
+</teachers>
+<courses>
+<!-- file courses_m2-cd_architecture-distribuée.xml -->
+
+<course id="Architecture-distribuée" label="UE,Informatique,M2,CD">
+
+    <part id="Architecture-distribuée-CM" nrSessions="5" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Architecture-distribuée-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-6</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="DIGUEZ Martin" nrSessions="5"/>
+        </allowedTeachers>
+    </part>
+
+    <part id="Architecture-distribuée-TP" nrSessions="4" label="TP">
+        <classes maxHeadCount="80">
+            <class id="Architecture-distribuée-TP-1" />
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-6</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="DIGUEZ Martin" nrSessions="4"/>
+        </allowedTeachers>
+    </part>
+<!--
+    <part id="Architecture-distribuée-CT" nrSessions="1" label="CT">
+        <classes maxHeadCount="80">
+            <class id="Architecture-distribuée-CT-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="90"> 
+            <dailySlots>480,540,600,840</dailySlots> 
+            <days>1-5</days>
+            <weeks>1-6</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="DIGUEZ Martin" nrSessions="1"/>
+        </allowedTeachers>
+    </part>
+-->
+    <!-- ========================== -->
+
+</course>
+<!-- end file courses_m2-cd_architecture-distribuée.xml -->
+<!-- file courses_m2-cd_gnu-linux.xml -->
+
+<course id="GNU-Linux" label="UE,Informatique,M2,CD">
+
+    <part id="GNU-Linux-CM" nrSessions="5" label="CM">
+        <classes maxHeadCount="80">
+            <class id="GNU-Linux-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>19-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="LEGEAY Marc" nrSessions="5"/>
+        </allowedTeachers>
+    </part>
+
+    <part id="GNU-Linux-TP" nrSessions="3" label="TP">
+        <classes maxHeadCount="80">
+            <class id="GNU-Linux-TP-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="240"> <!-- 4h -->
+            <dailySlots>480,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>19-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="LEGEAY Marc" nrSessions="3"/>
+        </allowedTeachers>
+    </part>
+
+    <!-- ========================== -->
+
+</course>
+<!-- end file courses_m2-cd_gnu-linux.xml -->
+<!-- file courses_m2-cd-ia_anglais.xml -->
+<course id="Anglais-M2" label="UE,Informatique,M2,CD,IA">
+    <part id="Anglais-M2-TP" nrSessions="15" label="TP">
+        <classes maxHeadCount="80">
+            <class id="Anglais-M2-TP-1A" label="TP-A"/> 
+            <class id="Anglais-M2-TP-1B" label="TP-B"/> 
+        </classes>
+
+        <allowedSlots sessionLength="80"> <!-- 1h20 -->
+            <dailySlots>480,570,660,750,840,930,1020</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="A116" />
+			<room refId="A117" />
+			<room refId="A118" />
+			<room refId="A119" />
+			<room refId="A120" />
+			<room refId="L101" />
+			<room refId="L102" />
+			<room refId="L103" />
+			<room refId="L104" />
+			<room refId="L105" />
+			<room refId="L106" />
+			<room refId="L107" />
+			<room refId="L201" />
+			<room refId="L202" />
+			<room refId="L203" />
+			<room refId="L204" />
+			<room refId="L205" />
+			<room refId="L206" />
+			<room refId="L207" />
+			<room refId="L208" />
+			<room refId="L209" />
+			<room refId="L210" />
+			<room refId="L229" />
+			<room refId="L230" />
+			<room refId="L231" />
+			<room refId="L232" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="MENAN Bruno" nrSessions="30" />
+        </allowedTeachers>
+    </part>
+</course>
+<!-- end file courses_m2-cd-ia_anglais.xml -->
+<!-- file courses_m2-cd-ia_apprentissage-profond.xml -->
+<course id="Apprentissage-profond" label="UE,Informatique,M2,CD,IA">
+
+    <part id="Apprentissage-profond-CM" nrSessions="5" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Apprentissage-profond-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 1h20 -->
+            <dailySlots>540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>10-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="LAMPRIER Sylvain" nrSessions="5" />
+        </allowedTeachers>
+    </part>
+
+    <part id="Apprentissage-profond-TD" nrSessions="5" label="TD">
+        <classes maxHeadCount="80">
+            <class id="Apprentissage-profond-TD-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 1h20 -->
+            <dailySlots>540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>10-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="LAMPRIER Sylvain" nrSessions="5" />
+        </allowedTeachers>
+    </part>
+</course>
+<!-- end file courses_m2-cd-ia_apprentissage-profond.xml -->
+<!-- file courses_m2-cd-ia_Bases-de-données-avancées.xml -->
+<course id="Bases-de-données-avancées" label="UE,Informatique,M2,CD,IA">
+
+    <part id="Bases-de-données-avancées-CM" nrSessions="6" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Bases-de-données-avancées-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 1h20 -->
+            <dailySlots>540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-6</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="LOISEAU Stephane" nrSessions="5" />
+            <teacher refId="GENEST David" nrSessions="1" />
+        </allowedTeachers>
+    </part>
+
+    <part id="Bases-de-données-avancées-TD" nrSessions="4" label="TD">
+        <classes maxHeadCount="80">
+            <class id="Bases-de-données-avancées-TD-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 1h20 -->
+            <dailySlots>540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-6</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="LOISEAU Stephane" nrSessions="4" />
+        </allowedTeachers>
+    </part>
+
+    <part id="Bases-de-données-avancées-TP" nrSessions="1" label="TP">
+        <classes maxHeadCount="80">
+            <class id="Bases-de-données-avancées-TP-1A" parent="Bases-de-données-avancées-TD-1" label="TP-A" /> 
+            <class id="Bases-de-données-avancées-TP-1B" parent="Bases-de-données-avancées-TD-1" label="TP-B" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 1h20 -->
+            <dailySlots>540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-6</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="GENEST David" nrSessions="2" />
+        </allowedTeachers>
+    </part>
+</course>
+<!-- end file courses_m2-cd-ia_Bases-de-données-avancées.xml -->
+<!-- file courses_m2-cd-ia_communication.xml -->
+<course id="Communication-M2" label="UE,Informatique,M2,CD,IA">
+
+    <part id="Communication1-M2-CM" nrSessions="4" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Communication1-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>10-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="MAILLET Chloé" nrSessions="4" />
+        </allowedTeachers>
+    </part>
+
+    <!-- ========================== -->
+
+    <part id="Communication2-M2-CM" nrSessions="2" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Communication2-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>10-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+            <teacher refId="GRIMAULT Virginie" nrSessions="2" />
+        </allowedTeachers>
+    </part>
+
+    <!-- ========================== -->
+
+    <part id="Communication1-M2-TP" nrSessions="1" label="TP">
+        <classes maxHeadCount="80">
+            <class id="Communication1-M2-TPA" /> 
+            <class id="Communication1-M2-TPB" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>10-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="MAILLET Chloé" nrSessions="2" />
+        </allowedTeachers>
+    </part>
+
+    <!-- ========================== -->
+
+</course>
+<!-- end file courses_m2-cd-ia_communication.xml -->
+<!-- file courses_m2-cd-ia_conférences-pro-science.xml -->
+<course id="Conférences-pro-et-science" label="UE,Informatique,M2,CD,IA">
+
+    <part id="Conférences-pro-et-science-long-CM" nrSessions="2" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Conférences-pro-et-science-long-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 1h20 -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>10-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="Intervenant" nrSessions="2" />
+        </allowedTeachers>
+    </part>
+
+    <part id="Conférences-pro-et-science-moyen-CM" nrSessions="1" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Conférences-pro-et-science-moyen-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="150"> <!-- 1h20 -->
+            <dailySlots>480-560,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>10-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="BLOT" nrSessions="1" />
+        </allowedTeachers>
+    </part>
+
+    <part id="Conférences-pro-et-science-THALES-CM" nrSessions="1" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Conférences-pro-et-science-THALES-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="120"> <!-- 1h20 -->
+            <dailySlots>480,510,540,570,600,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>10-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="Intervenant Thales" nrSessions="1" />
+        </allowedTeachers>
+    </part>
+    <part id="Conférences-pro-et-science-CAP-GEMINI-CM" nrSessions="1" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Conférences-pro-et-science-CAP-GEMINI-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="120"> <!-- 1h20 -->
+            <dailySlots>480,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>10-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="Intervenant CapGemini" nrSessions="1" />
+        </allowedTeachers>
+    </part>
+
+</course>
+<!-- end file courses_m2-cd-ia_conférences-pro-science.xml -->
+<!-- file courses_m2-cd-ia_droit.xml -->
+<course id="Droit-M2" label="UE,Informatique,M2,CD,IA">
+
+    <part id="Droit-M2-CM" nrSessions="3" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Droit-M2-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="240"> <!-- 1h20 -->
+            <dailySlots>480,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1</days>
+            <weeks>2,5,10,13</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="DUMONT Ingrid" nrSessions="3" />
+        </allowedTeachers>
+    </part>
+</course>
+<!-- end file courses_m2-cd-ia_droit.xml -->
+<!-- file courses_m2-cd-ia_optimisation-appliquée.xml -->
+<course id="Optimisation-appliquée" label="UE,Informatique,M2,CD,IA">
+
+    <part id="Optimisation-appliquée-CM" nrSessions="2" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Optimisation-appliquée-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="120"> <!-- 1h20 -->
+            <dailySlots>480,540,600,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-6</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="LESAINT David" nrSessions="2" />
+        </allowedTeachers>
+    </part>
+
+    <part id="Optimisation-appliquée-TD" nrSessions="2" label="TD">
+        <classes maxHeadCount="80">
+            <class id="Optimisation-appliquée-TD-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="120"> <!-- 1h20 -->
+            <dailySlots>480,540,600,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-6</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="LESAINT David" nrSessions="2" />
+        </allowedTeachers>
+    </part>
+
+    <part id="Optimisation-appliquée-TP" nrSessions="4" label="TP">
+        <classes maxHeadCount="80">
+            <class id="Optimisation-appliquée-TP-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 1h20 -->
+            <dailySlots>540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>5-15</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="SAUBION Frédéric" nrSessions="4" />
+        </allowedTeachers>
+    </part>
+</course>
+<!-- end file courses_m2-cd-ia_optimisation-appliquée.xml -->
+<!-- file courses_m2-cd-ia_programmation-parallèle.xml -->
+<course id="Programmation-parallèle" label="UE,Informatique,M2,CD,IA">
+
+    <part id="Programmation-parallèle-CM" nrSessions="9" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Programmation-parallèle-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 1h20 -->
+            <dailySlots>540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>11-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="RICHER Jean-Michel" nrSessions="9" />
+        </allowedTeachers>
+    </part>
+
+    <part id="Programmation-parallèle-TP" nrSessions="4" label="TP">
+        <!-- chaque classe CTD sectionnée en 2 classes TP -->
+        <classes maxHeadCount="20">
+            <class id="Programmation-parallèle-TP-1A" parent="Programmation-parallèle-CM-1" label="TP-A" />
+            <class id="Programmation-parallèle-TP-1B" parent="Programmation-parallèle-CM-1" label="TP-B" />
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 1h20 -->
+            <dailySlots>540,840</dailySlots> <!-- 08h00-09h30 jusqu'à 17h00-18h30 -->
+            <days>1-5</days>
+            <weeks>11-24</weeks>
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single"> <!-- salles informatiques équipées d'AIO -->
+            <room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+            <teacher refId="RICHER Jean-Michel" nrSessions="8" />
+        </allowedTeachers>
+    </part>
+</course>
+<!-- end file courses_m2-cd-ia_programmation-parallèle.xml -->
+<!-- file courses_m2-cd-ia_projet.xml -->
+<!-- end file courses_m2-cd-ia_projet.xml -->
+<!-- file courses_m2-cd_initiation-r&d.xml -->
+
+<course id="Initiation-R-et-D" label="UE,Informatique,M2,CD">
+
+    <part id="Initiation-R-et-D-CM" nrSessions="5" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Initiation-R-et-D-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>15-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="HAO Jin-Kao" nrSessions="1"/>
+            <teacher refId="DUPIN Nicolas" nrSessions="3"/>
+            <teacher refId="LOISEAU Stephane" nrSessions="1"/>
+        </allowedTeachers>
+    </part>
+
+    <part id="Initiation-R-et-D-TP" nrSessions="1" label="TP">
+        <classes maxHeadCount="80">
+            <class id="Initiation-R-et-D-TP-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>15-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+            <teacher refId="HAO Jin-Kao" nrSessions="1"/>
+        </allowedTeachers>
+    </part>
+
+    <!-- ========================== -->
+
+</course>
+<!-- end file courses_m2-cd_initiation-r&d.xml -->
+<!-- file courses_m2-cd_objets-connectés-iot.xml -->
+
+<course id="Objets-connectés-et-IoT" label="UE,Informatique,M2,CD">
+
+    <part id="Objets-connectés-et-IoT-CM" nrSessions="5" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Objets-connectés-et-IoT-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="150"> <!-- 2h30 -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="GARREAU Fabien" nrSessions="5"/>
+        </allowedTeachers>
+    </part>
+
+    <part id="Objets-connectés-et-IoT-TP" nrSessions="4" label="TP">
+        <classes maxHeadCount="80">
+            <class id="Objets-connectés-et-IoT-TP-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="GARREAU Fabien" nrSessions="4"/>
+        </allowedTeachers>
+    </part>
+
+    <!-- ========================== -->
+
+</course>
+<!-- end file courses_m2-cd_objets-connectés-iot.xml -->
+<!-- file courses_m2-cd_sécurité-réseaux.xml -->
+
+<course id="Sécurité-et-réseaux" label="UE,Informatique,M2,CD">
+
+    <part id="Sécurité-et-réseaux-CM" nrSessions="6" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Sécurité-et-réseaux-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>10-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="HAMIEZ Jean-Phillipe" nrSessions="6"/>
+        </allowedTeachers>
+    </part>
+
+    <part id="Sécurité-et-réseaux-TP" nrSessions="2" label="TP">
+        <classes maxHeadCount="80">
+            <class id="Sécurité-et-réseaux-TP-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>10-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="HAMIEZ Jean-Phillipe" nrSessions="2"/>
+        </allowedTeachers>
+    </part>
+
+    <part id="Sécurité-et-réseaux-TD" nrSessions="1" label="TD">
+        <classes maxHeadCount="80">
+            <class id="Sécurité-et-réseaux-TD-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>10-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="HAMIEZ Jean-Phillipe" nrSessions="1"/>
+        </allowedTeachers>
+    </part>
+
+    <part id="Sécurité-et-réseaux-CC" nrSessions="1" label="CC">
+        <classes maxHeadCount="80">
+            <class id="Sécurité-et-réseaux-CC-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="150"> <!-- 3h -->
+            <dailySlots>480,540,600,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>10-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="HAMIEZ Jean-Phillipe" nrSessions="1"/>
+        </allowedTeachers>
+    </part>
+
+    <!-- ========================== -->
+
+</course>
+<!-- end file courses_m2-cd_sécurité-réseaux.xml -->
+<!-- file courses_m2-cd_technologies-pro-émergentes.xml -->
+
+<course id="Technologies-pro-émergentes" label="UE,Informatique,M2,CD">
+
+    <part id="Technologies-pro-émergentes-CM1" nrSessions="3" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Technologies-pro-émergentes-CM1-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="120"> <!-- 3h -->
+            <dailySlots>480,540,600,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="GUILLMER Y" nrSessions="3"/>
+        </allowedTeachers>
+    </part>
+
+    <part id="Technologies-pro-émergentes-CM2" nrSessions="2" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Technologies-pro-émergentes-CM2-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="DUPIN Nicolas" nrSessions="2"/>
+        </allowedTeachers>
+    </part>
+
+    <!-- ========================== -->
+
+</course>
+<!-- end file courses_m2-cd_technologies-pro-émergentes.xml -->
+<!-- file courses_m2-cd_tests.xml -->
+
+<course id="Tests" label="UE,Informatique,M2,CD">
+
+    <part id="Tests-CM" nrSessions="3" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Tests-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="LAMPRIER Sylvain" nrSessions="3"/>
+        </allowedTeachers>
+    </part>
+
+    <part id="Tests-TP" nrSessions="3" label="TP">
+        <classes maxHeadCount="80">
+            <class id="Tests-TP-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H006" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="LAMPRIER Sylvain" nrSessions="3"/>
+        </allowedTeachers>
+    </part>
+
+    <!-- ========================== -->
+
+</course>
+<!-- end file courses_m2-cd_tests.xml -->
+<!-- file courses_m2-ia_algorithmes-intelligents.xml -->
+<course id="Algorithmes-intelligents" label="UE,Informatique,M2,IA">
+
+    <part id="Algorithmes-intelligents-CM" nrSessions="10" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Algorithmes-intelligents-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>11-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H005" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="SAUBION Frédéric" nrSessions="5"/>
+            <teacher refId="LARDEUX Frédéric" nrSessions="5" />
+        </allowedTeachers>
+    </part>
+
+    <!-- ========================== -->
+
+</course>
+<!-- end file courses_m2-ia_algorithmes-intelligents.xml -->
+<!-- file courses_m2-ia_approches-exactes-de-résolution.xml -->
+<course id="Approches-exactes-de-résolution" label="UE,Informatique,M2,IA">
+
+    <part id="Approches-exactes-de-résolution-CM" nrSessions="10" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Approches-exactes-de-résolution-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H005" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="LESAINT David" nrSessions="5"/>
+            <teacher refId="MONFROY Eric" nrSessions="5" />
+        </allowedTeachers>
+    </part>
+
+    <part id="Approches-exactes-de-résolution-CT" nrSessions="1" label="CT">
+        <classes maxHeadCount="80">
+            <class id="Approches-exactes-de-résolution-CT-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="90"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H005" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="LESAINT David" nrSessions="1"/>
+        </allowedTeachers>
+    </part>
+
+    <!-- ========================== -->
+
+</course>
+<!-- end file courses_m2-ia_approches-exactes-de-résolution.xml -->
+<!-- file courses_m2-ia_métaheuristiques.xml -->
+<course id="Métaheuristiques" label="UE,Informatique,M2,IA">
+
+    <part id="Métaheuristiques-CM" nrSessions="10" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Métaheuristiques-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>2-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H005" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="HAO Jin-Kao" nrSessions="10"/>
+        </allowedTeachers>
+    </part>
+
+    <!-- ========================== -->
+
+</course>
+<!-- end file courses_m2-ia_métaheuristiques.xml -->
+<!-- file courses_m2-ia_représentation-des-connaissances.xml -->
+<course id="Représentation-des-connaissances" label="UE,Informatique,M2,IA">
+
+    <part id="Représentation-des-connaissances-CM" nrSessions="12" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Représentation-des-connaissances-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,600,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>19-24</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H005" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+            <teacher refId="LEFEVRE Claire" nrSessions="3"/>
+            <teacher refId="GARCIA Laurent" nrSessions="2"/>
+            <teacher refId="STEPHAN Igor" nrSessions="4"/>
+            <teacher refId="AMGHAR Tassadit" nrSessions="3"/>
+        </allowedTeachers>
+    </part>
+
+    <!-- ========================== -->
+
+</course>
+<!-- end file courses_m2-ia_représentation-des-connaissances.xml -->
+<!-- file courses_m2-ia_systèmes-base-de-connaissances.xml -->
+
+<course id="Systèmes-base-de-connaissances" label="UE,Informatique,M2,IA">
+
+    <part id="Systèmes-base-de-connaissances-CM" nrSessions="10" label="CM">
+        <classes maxHeadCount="80">
+            <class id="Systèmes-base-de-connaissances-CM-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="180"> <!-- 3h -->
+            <dailySlots>480,540,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-15</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H005" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="LOISEAU Stephane" nrSessions="10"/>
+        </allowedTeachers>
+    </part>
+
+    <part id="Systèmes-base-de-connaissances-CT" nrSessions="1" label="CT">
+        <classes maxHeadCount="80">
+            <class id="Systèmes-base-de-connaissances-CT-1" /> 
+        </classes>
+
+        <allowedSlots sessionLength="90"> <!-- 3h -->
+            <dailySlots>480,540,600,840</dailySlots> <!-- 08h00-09h20 jusqu'à 17h00-18h20 -->
+            <days>1-5</days>
+            <weeks>1-15</weeks> 
+        </allowedSlots>
+
+        <allowedRooms sessionRooms="single">
+        	<room refId="H005" />
+        </allowedRooms>
+
+        <allowedTeachers sessionTeachers="1">
+			<teacher refId="LOISEAU Stephane" nrSessions="1"/>
+        </allowedTeachers>
+    </part>
+
+    <!-- ========================== -->
+
+</course>
+<!-- end file courses_m2-ia_systèmes-base-de-connaissances.xml -->
+</courses>
+<students>
+<!-- file students_m2-CD-IA.xml -->
+
+    <student id="student-M2-Informatique-1" label="M2-INFORMATIQUE,M2,informatique,IA">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Algorithmes-intelligents"/>
+            <course refId="Approches-exactes-de-résolution"/>
+            <course refId="Métaheuristiques"/>
+            <course refId="Représentation-des-connaissances"/>
+            <course refId="Systèmes-base-de-connaissances"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-2" label="M2-INFORMATIQUE,M2,informatique,CD">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-3" label="M2-INFORMATIQUE,M2,informatique,IA">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Algorithmes-intelligents"/>
+            <course refId="Approches-exactes-de-résolution"/>
+            <course refId="Métaheuristiques"/>
+            <course refId="Représentation-des-connaissances"/>
+            <course refId="Systèmes-base-de-connaissances"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-4" label="M2-INFORMATIQUE,M2,informatique,CD,ALTERNANT">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-5" label="M2-INFORMATIQUE,M2,informatique,IA">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Algorithmes-intelligents"/>
+            <course refId="Approches-exactes-de-résolution"/>
+            <course refId="Métaheuristiques"/>
+            <course refId="Représentation-des-connaissances"/>
+            <course refId="Systèmes-base-de-connaissances"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-6" label="M2-INFORMATIQUE,M2,informatique,CD,ALTERNANT">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-7" label="M2-INFORMATIQUE,M2,informatique,CD,ALTERNANT">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-8" label="M2-INFORMATIQUE,M2,informatique,IA">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Algorithmes-intelligents"/>
+            <course refId="Approches-exactes-de-résolution"/>
+            <course refId="Métaheuristiques"/>
+            <course refId="Représentation-des-connaissances"/>
+            <course refId="Systèmes-base-de-connaissances"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-9" label="M2-INFORMATIQUE,M2,informatique,IA">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Algorithmes-intelligents"/>
+            <course refId="Approches-exactes-de-résolution"/>
+            <course refId="Métaheuristiques"/>
+            <course refId="Représentation-des-connaissances"/>
+            <course refId="Systèmes-base-de-connaissances"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-10" label="M2-INFORMATIQUE,M2,informatique,IA">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Algorithmes-intelligents"/>
+            <course refId="Approches-exactes-de-résolution"/>
+            <course refId="Métaheuristiques"/>
+            <course refId="Représentation-des-connaissances"/>
+            <course refId="Systèmes-base-de-connaissances"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-11" label="M2-INFORMATIQUE,M2,informatique,CD,ALTERNANT">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-12" label="M2-INFORMATIQUE,M2,informatique,CD,ALTERNANT">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-13" label="M2-INFORMATIQUE,M2,informatique,CD,ALTERNANT">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-14" label="M2-INFORMATIQUE,M2,informatique,CD,ALTERNANT">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-15" label="M2-INFORMATIQUE,M2,informatique,CD,ALTERNANT">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-16" label="M2-INFORMATIQUE,M2,informatique,CD,ALTERNANT">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-17" label="M2-INFORMATIQUE,M2,informatique,CD,ALTERNANT">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-18" label="M2-INFORMATIQUE,M2,informatique,CD,ALTERNANT">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-19" label="M2-INFORMATIQUE,M2,informatique,CD,ALTERNANT">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-20" label="M2-INFORMATIQUE,M2,informatique,CD">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-21" label="M2-INFORMATIQUE,M2,informatique,CD">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-22" label="M2-INFORMATIQUE,M2,informatique,CD">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-23" label="M2-INFORMATIQUE,M2,informatique,CD">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-24" label="M2-INFORMATIQUE,M2,informatique,CD">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-25" label="M2-INFORMATIQUE,M2,informatique,CD">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-26" label="M2-INFORMATIQUE,M2,informatique,CD">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+    <student id="student-M2-Informatique-27" label="M2-INFORMATIQUE,M2,informatique,CD">
+        <courses>
+            <course refId="Anglais-M2"/>
+            <course refId="Apprentissage-profond"/>
+            <course refId="Bases-de-données-avancées"/>
+            <course refId="Communication-M2"/>
+            <course refId="Conférences-pro-et-science"/>
+            <course refId="Droit-M2"/>
+            <course refId="Optimisation-appliquée"/>
+            <course refId="Programmation-parallèle"/>
+            <course refId="Architecture-distribuée"/>
+            <course refId="GNU-Linux"/>
+            <course refId="Initiation-R-et-D"/>
+            <course refId="Objets-connectés-et-IoT"/>
+            <course refId="Sécurité-et-réseaux"/>
+            <course refId="Technologies-pro-émergentes"/>
+            <course refId="Tests"/>
+        </courses>
+    </student>
+<!-- end file students_m2-CD-IA.xml -->
+</students>
+<rules>
+<!-- file rules_m2-cd_architecture-distribuée.xml -->
+<rule>
+    <selector generator="(class,*)" filters="part[id='Architecture-distribuée-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(class,{1,2,4})" filters="part[id='Architecture-distribuée-TP']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(course,*)" filters="part[id='Architecture-distribuée-CM']{5}|part[id='Architecture-distribuée-TP']{3}"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+	<selector generator="(class,{3})" filters="part[id='Architecture-distribuée-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='Architecture-distribuée-TP']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule>
+<!-- end file rules_m2-cd_architecture-distribuée.xml -->
+<!-- file rules_m2-cd_gnu-linux.xml -->
+<rule>
+    <selector generator="(class,{1,3,5})" filters="part[id='GNU-Linux-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(course,*)" filters="part[id='GNU-Linux-CM']{2,4}|part[id='GNU-Linux-TP']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+	<selector generator="(class,{5})" filters="part[id='GNU-Linux-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='GNU-Linux-TP']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule>
+<!-- end file rules_m2-cd_gnu-linux.xml -->
+<!-- file rules_m2-cd-ia_anglais.xml -->
+<rule>
+    <selector generator="(class,*)" filters="part[id='Anglais-M2-TP']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+
+<!-- periode de vacance + projet pour les non alternants week 7 8 9 -->
+<rule>
+	<selector generator="(class, *)" filters="course[label='M2'],course[label='Informatique']"/>
+	<constraint name="forbiddenPeriod" type="hard">
+		<parameters> <!-- Lundi 11h-12h20 -->
+			<parameter name="first">43201</parameter>
+			<parameter name="last">57600</parameter>
+		</parameters>
+	</constraint>
+</rule>
+
+<!-- periode de vacance + projet pour les non alternants week 15 16 17 18 -->
+<rule>
+	<selector generator="(class, *)" filters="course[label='M2'],course[label='Informatique']"/>
+	<constraint name="forbiddenPeriod" type="hard">
+		<parameters> <!-- Lundi 11h-12h20 -->
+			<parameter name="first">100800</parameter>
+			<parameter name="last">122400</parameter>
+		</parameters>
+	</constraint>
+</rule>
+<!-- end file rules_m2-cd-ia_anglais.xml -->
+<!-- file rules_m2-cd-ia_apprentissage-profond.xml -->
+<rule>
+    <selector generator="(class,*)" filters="part[id='Apprentissage-profond-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(class,*)" filters="part[id='Apprentissage-profond-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(class,*)" filters="part[id='Apprentissage-profond-TD']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+	<selector generator="(class,{1})" filters="part[id='Apprentissage-profond-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='Apprentissage-profond-TD']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule>
+
+<rule>
+	<selector generator="(class, *)" filters="course[id='Apprentissage-profond']"/>
+	<constraint name="forbiddenPeriod" type="hard">
+		<parameters> <!-- Lundi 11h-12h20 -->
+			<parameter name="first">1</parameter>
+			<parameter name="last">72000</parameter>
+		</parameters>
+	</constraint>
+</rule>
+<!-- end file rules_m2-cd-ia_apprentissage-profond.xml -->
+<!-- file rules_m2-cd-ia_Bases-de-données-avancées.xml -->
+<rule>
+    <selector generator="(class,{1,3,5})" filters="part[id='Bases-de-données-avancées-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(class,{1,2})" filters="part[id='Bases-de-données-avancées-TD']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(class,{2,4})" filters="part[id='Bases-de-données-avancées-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(class,{1,3})" filters="part[id='Bases-de-données-avancées-TD']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+	<selector generator="(class,{2})" filters="part[id='Bases-de-données-avancées-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='Bases-de-données-avancées-TD']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(class,{1})" filters="part[id='Bases-de-données-avancées-TD']|class[id='Bases-de-données-avancées-TP-1A']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(class,{1})" filters="part[id='Bases-de-données-avancées-TD']|class[id='Bases-de-données-avancées-TP-1B']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+
+<rule>
+	<selector generator="(class,{4})" filters="part[id='Bases-de-données-avancées-TD']"/>
+	<selector generator="(class,{1})" filters="part[id='Bases-de-données-avancées-TP']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule>
+
+
+<rule>
+	<selector generator="(class, *)" filters="course[id='Apprentissage-profond']"/>
+	<constraint name="allowedPeriod" type="hard">
+		<parameters> <!-- Lundi 11h-12h20 -->
+			<parameter name="first">43201</parameter>
+			<parameter name="last">144000</parameter>
+		</parameters>
+	</constraint>
+</rule>
+<!-- end file rules_m2-cd-ia_Bases-de-données-avancées.xml -->
+<!-- file rules_m2-cd-ia_communication.xml -->
+<rule>
+    <selector generator="(class,*)" filters="part[id='Communication1-M2-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(class,*)" filters="part[id='Communication2-M2-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+	<selector generator="(class,{3})" filters="part[id='Communication1-M2-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='Communication1-M2-TP']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule><!-- end file rules_m2-cd-ia_communication.xml -->
+<!-- file rules_m2-cd-ia_conférences-pro-science.xml -->
+<rule>
+	<selector generator="(class, *)" filters="part[id='Conférences-pro-et-science-long-CM']"/>
+    <constraint name="allowedPeriod" type="hard">
+    	<parameters>
+    		<parameter name="first">67681</parameter>
+    		<parameter name="last">72000</parameter>
+		</parameters>
+	</constraint>
+</rule>
+
+<rule>
+	<selector generator="(class, *)" filters="part[id='Conférences-pro-et-science-moyen-CM']"/>
+    <constraint name="allowedPeriod" type="hard">
+    	<parameters>
+    		<parameter name="first">92161</parameter>
+    		<parameter name="last">93600</parameter>
+		</parameters>
+	</constraint>
+</rule>
+
+
+<rule>
+	<selector generator="(class, *)" filters="part[id='Conférences-pro-et-science-THALES-CM']"/>
+    <constraint name="allowedPeriod" type="hard">
+    	<parameters>
+    		<parameter name="first">93600</parameter>
+    		<parameter name="last">95040</parameter>
+		</parameters>
+	</constraint>
+</rule>
+
+<rule>
+	<selector generator="(class, *)" filters="part[id='Conférences-pro-et-science-CAP-GEMINI-CM']"/>
+    <constraint name="allowedPeriod" type="hard">
+    	<parameters>
+    		<parameter name="first">99360</parameter>
+    		<parameter name="last">100080</parameter>
+		</parameters>
+	</constraint>
+</rule>
+<!-- end file rules_m2-cd-ia_conférences-pro-science.xml -->
+<!-- file rules_m2-cd-ia_droit.xml -->
+<rule>
+    <selector generator="(class,*)" filters="part[id='Droit-M2-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+<!-- end file rules_m2-cd-ia_droit.xml -->
+<!-- file rules_m2-cd-ia_optimisation-appliquée.xml -->
+<rule>
+    <selector generator="(class,*)" filters="part[id='Optimisation-appliquée-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(class,*)" filters="part[id='Optimisation-appliquée-TD']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(class,*)" filters="part[id='Optimisation-appliquée-TP']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+	<selector generator="(class,{2})" filters="part[id='Optimisation-appliquée-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='Optimisation-appliquée-TD']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule>
+
+<rule>
+	<selector generator="(class,{2})" filters="part[id='Optimisation-appliquée-TD']"/>
+	<selector generator="(class,{1})" filters="part[id='Optimisation-appliquée-TP']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule><!-- end file rules_m2-cd-ia_optimisation-appliquée.xml -->
+<!-- file rules_m2-cd-ia_programmation-parallèle.xml -->
+<rule>
+    <selector generator="(class,*)" filters="part[id='Programmation-parallèle-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(class,*)" filters="part[id='Programmation-parallèle-TP']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+	<selector generator="(class,{5})" filters="part[id='Programmation-parallèle-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='Programmation-parallèle-TP']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule><!-- end file rules_m2-cd-ia_programmation-parallèle.xml -->
+<!-- file rules_m2-cd-ia_projet.xml -->
+<!-- end file rules_m2-cd-ia_projet.xml -->
+<!-- file rules_m2-cd_initiation-r&d.xml -->
+<rule>
+    <selector generator="(class, *)" filters="part[id='Initiation-R-et-D-CM']"/>
+    <constraint name="differentWeek" type="hard">
+    </constraint>
+</rule> 
+
+<rule>
+	<selector generator="(class,{2})" filters="part[id='Initiation-R-et-D-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='Initiation-R-et-D-TP']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule>
+<!-- end file rules_m2-cd_initiation-r&d.xml -->
+<!-- file rules_m2-cd_objets-connectés-iot.xml -->
+
+
+<rule>
+    <selector generator="(course, *)" filters="course[id='Objets-connectés-et-IoT']"/>
+    <constraint name="sameWeekDay" type="hard">
+    </constraint>
+</rule> 
+
+<rule>
+    <selector generator="(course, *)" filters="course[id='Objets-connectés-et-IoT']"/>
+    <constraint name="sameWeeklySlot" type="hard">
+    </constraint>
+</rule> 
+
+<rule>
+	<selector generator="(class,{5})" filters="part[id='Objets-connectés-et-IoT-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='Objets-connectés-et-IoT-TP']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule>
+<!-- end file rules_m2-cd_objets-connectés-iot.xml -->
+<!-- file rules_m2-cd_sécurité-réseaux.xml -->
+<rule>
+    <selector generator="(class, *)" filters="part[id='Sécurité-et-réseaux-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard">
+    </constraint>
+</rule> 
+
+<rule>
+    <selector generator="(class, *)" filters="part[id='Sécurité-et-réseaux-TD']"/>
+    <constraint name="sameWeeklySlot" type="hard">
+    </constraint>
+</rule> 
+
+<rule>
+	<selector generator="(class,{3})" filters="part[id='Sécurité-et-réseaux-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='Sécurité-et-réseaux-TD']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule>
+
+<rule>
+	<selector generator="(class,{2})" filters="part[id='Sécurité-et-réseaux-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='Sécurité-et-réseaux-TP']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule>
+
+
+<rule>
+	<selector generator="(class,{6})" filters="part[id='Sécurité-et-réseaux-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='Sécurité-et-réseaux-CC']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule>
+<!-- end file rules_m2-cd_sécurité-réseaux.xml -->
+<!-- file rules_m2-cd_technologies-pro-émergentes.xml -->
+<rule>
+    <selector generator="(course, *)" filters="course[id='Technologies-pro-émergentes']"/>
+    <constraint name="differentWeek" type="hard">
+    </constraint>
+</rule> 
+
+<rule>
+    <selector generator="(course, *)" filters="course[id='Technologies-pro-émergentes']"/>
+    <constraint name="sameWeeklySlot" type="hard">
+    </constraint>
+</rule> 
+
+<rule>
+    <selector generator="(course, *)" filters="course[id='Technologies-pro-émergentes']"/>
+    <constraint name="sameWeekDay" type="hard">
+    </constraint>
+</rule> <!-- end file rules_m2-cd_technologies-pro-émergentes.xml -->
+<!-- file rules_m2-cd_tests.xml -->
+<rule>
+    <selector generator="(course, *)" filters="course[id='Tests']"/>
+    <constraint name="sameWeeklySlot" type="hard">
+    </constraint>
+</rule> 
+
+<rule>
+    <selector generator="(course, *)" filters="course[id='Tests']"/>
+    <constraint name="sameWeekDay" type="hard">
+    </constraint>
+</rule> 
+
+<rule>
+	<selector generator="(class,{1})" filters="part[id='Tests-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='Tests-TP']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule>
+
+<rule>
+	<selector generator="(class,{3})" filters="part[id='Tests-TP']"/>
+	<selector generator="(class,{2})" filters="part[id='Tests-CM']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule><!-- end file rules_m2-cd_tests.xml -->
+<!-- file rules_m2-ia_algorithmes-intelligents.xml -->
+<rule>
+    <selector generator="(class,*)" filters="part[id='Algorithmes-intelligents-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+<!-- end file rules_m2-ia_algorithmes-intelligents.xml -->
+<!-- file rules_m2-ia_approches-exactes-de-résolution.xml -->
+<rule>
+    <selector generator="(class,{1-5})" filters="part[id='Approches-exactes-de-résolution-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(course,{1})" filters="part[id='Approches-exactes-de-résolution-CM']|part[id='Approches-exactes-de-résolution-CT']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(class,{6-10})" filters="part[id='Approches-exactes-de-résolution-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+    <selector generator="(class,{1-5})" filters="part[id='Approches-exactes-de-résolution-CM']"/>
+    <constraint name="allowedPeriod" type="hard">
+    	<parameters>
+    		<parameter name="first">1</parameter>
+    		<parameter name="last">72000</parameter>
+    		</parameters>
+    </constraint>
+</rule>
+
+<rule>
+    <selector generator="(class,{6-10})" filters="part[id='Approches-exactes-de-résolution-CM']"/>
+    <constraint name="allowedPeriod" type="hard">
+    	<parameters>
+    		<parameter name="first">129601</parameter>
+    		<parameter name="last">172800</parameter>
+    		</parameters>
+    </constraint>
+</rule>
+
+<rule>
+	<selector generator="(class,{5})" filters="part[id='Approches-exactes-de-résolution-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='Approches-exactes-de-résolution-CT']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule>
+<!-- end file rules_m2-ia_approches-exactes-de-résolution.xml -->
+<!-- file rules_m2-ia_métaheuristiques.xml -->
+<rule>
+    <selector generator="(class,*)" filters="part[id='Métaheuristiques-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+<!-- end file rules_m2-ia_métaheuristiques.xml -->
+<!-- file rules_m2-ia_représentation-des-connaissances.xml -->
+<rule>
+    <selector generator="(class,{2,4,6,8,10,12})" filters="part[id='Représentation-des-connaissances-CM']"/>
+    <constraint name="periodic" type="hard">
+		<parameters>
+			<parameter name="value">1</parameter>
+			<parameter name="unit">week</parameter>
+		</parameters>
+	</constraint>
+</rule>
+
+<rule>
+    <selector generator="(class,{1,3,5,7,9,11})" filters="part[id='Représentation-des-connaissances-CM']"/>
+    <constraint name="periodic" type="hard">
+		<parameters>
+			<parameter name="value">1</parameter>
+			<parameter name="unit">week</parameter>
+		</parameters>
+	</constraint>
+</rule>
+<!-- end file rules_m2-ia_représentation-des-connaissances.xml -->
+<!-- file rules_m2-ia_systèmes-base-de-connaissances.xml -->
+<rule>
+    <selector generator="(class,*)" filters="part[id='Systèmes-base-de-connaissances-CM']"/>
+    <constraint name="sameWeeklySlot" type="hard"/>
+</rule>
+
+<rule>
+	<selector generator="(class,{10})" filters="part[id='Systèmes-base-de-connaissances-CM']"/>
+	<selector generator="(class,{1})" filters="part[id='Systèmes-base-de-connaissances-CT']"/>
+	<constraint name="sequenced" type="hard"/>
+</rule>
+<!-- end file rules_m2-ia_systèmes-base-de-connaissances.xml -->
+</rules>
+<solution>
+<groups>
+<!-- file groups_m2-informatique.xml -->
+<group id="m2-informatique-tp-cd-alternant" headCount="12">
+    <students>
+        <student refId="student-M2-Informatique-4" />
+        <student refId="student-M2-Informatique-6" />
+        <student refId="student-M2-Informatique-7" />
+        <student refId="student-M2-Informatique-11" />
+        <student refId="student-M2-Informatique-12" />
+        <student refId="student-M2-Informatique-13" />
+        <student refId="student-M2-Informatique-14" />
+        <student refId="student-M2-Informatique-15" />
+        <student refId="student-M2-Informatique-16" />
+        <student refId="student-M2-Informatique-17" />
+        <student refId="student-M2-Informatique-18" />
+        <student refId="student-M2-Informatique-19" />
+    </students>
+    <classes>
+          <!-- P1 -->
+          <class refId="Anglais-M2-TP-1A"/>
+          <class refId="Apprentissage-profond-CM-1"/>
+          <class refId="Apprentissage-profond-TD-1"/>
+          <class refId="Bases-de-données-avancées-CM-1"/>
+          <class refId="Bases-de-données-avancées-TD-1"/>
+          <class refId="Bases-de-données-avancées-TP-1A"/>
+          <class refId="Communication1-CM-1"/>
+          <class refId="Communication1-M2-TPA"/>
+          <class refId="Communication2-CM-1"/>
+          <class refId="Conférences-pro-et-science-long-CM-1"/>
+          <class refId="Conférences-pro-et-science-moyen-CM-1"/>
+          <class refId="Conférences-pro-et-science-THALES-CM-1"/>
+          <class refId="Conférences-pro-et-science-CAP-GEMINI-CM-1"/>
+          <class refId="Droit-M2-CM-1"/>
+          <class refId="Optimisation-appliquée-CM-1"/> 
+          <class refId="Optimisation-appliquée-TD-1"/>
+          <class refId="Optimisation-appliquée-TP-1"/>
+          <class refId="Programmation-parallèle-CM-1"/>
+          <class refId="Programmation-parallèle-TP-1A"/>
+          <class refId="Architecture-distribuée-CM-1"/> 
+          <class refId="Architecture-distribuée-TP-1"/>
+          <class refId="GNU-Linux-CM-1"/>
+          <class refId="GNU-Linux-TP-1"/>
+          <class refId="Initiation-R-et-D-CM-1"/>
+          <class refId="Initiation-R-et-D-TP-1"/>
+          <class refId="Objets-connectés-et-IoT-CM-1"/>
+          <class refId="Objets-connectés-et-IoT-TP-1"/>
+          <class refId="Sécurité-et-réseaux-CM-1"/>
+          <class refId="Sécurité-et-réseaux-TD-1"/>
+          <class refId="Sécurité-et-réseaux-TP-1"/>
+          <class refId="Sécurité-et-réseaux-CC-1"/>
+          <class refId="Technologies-pro-émergentes-CM1-1"/>
+          <class refId="Technologies-pro-émergentes-CM2-1"/>
+          <class refId="Tests-CM-1"/>
+          <class refId="Tests-TP-1"/>
+    </classes>
+</group>
+
+<group id="m2-informatique-tp-cd" headCount="9">
+    <students>
+        <student refId="student-M2-Informatique-2"/>
+        <student refId="student-M2-Informatique-20"/>
+        <student refId="student-M2-Informatique-21"/>
+        <student refId="student-M2-Informatique-22"/>
+        <student refId="student-M2-Informatique-23"/>
+        <student refId="student-M2-Informatique-24"/>
+        <student refId="student-M2-Informatique-25"/>
+        <student refId="student-M2-Informatique-26"/>
+        <student refId="student-M2-Informatique-27"/>
+    </students>
+    <classes>
+          <!-- P1 -->
+          <class refId="Anglais-M2-TP-1B"/>
+          <class refId="Apprentissage-profond-CM-1"/>
+          <class refId="Apprentissage-profond-TD-1"/>
+          <class refId="Bases-de-données-avancées-CM-1"/>
+          <class refId="Bases-de-données-avancées-TD-1"/>
+          <class refId="Bases-de-données-avancées-TP-1B"/>
+          <class refId="Communication1-CM-1"/>
+          <class refId="Communication1-M2-TPB"/>
+          <class refId="Communication2-CM-1"/>
+          <class refId="Conférences-pro-et-science-long-CM-1"/>
+          <class refId="Conférences-pro-et-science-moyen-CM-1"/>
+          <class refId="Conférences-pro-et-science-THALES-CM-1"/>
+          <class refId="Conférences-pro-et-science-CAP-GEMINI-CM-1"/>
+          <class refId="Droit-M2-CM-1"/>
+          <class refId="Optimisation-appliquée-CM-1"/> 
+          <class refId="Optimisation-appliquée-TD-1"/>
+          <class refId="Optimisation-appliquée-TP-1"/>
+          <class refId="Programmation-parallèle-CM-1"/>
+          <class refId="Programmation-parallèle-TP-1B"/>
+          <class refId="Architecture-distribuée-CM-1"/> 
+          <class refId="Architecture-distribuée-TP-1"/>
+          <class refId="GNU-Linux-CM-1"/>
+          <class refId="GNU-Linux-TP-1"/>
+          <class refId="Initiation-R-et-D-CM-1"/>
+          <class refId="Initiation-R-et-D-TP-1"/>
+          <class refId="Objets-connectés-et-IoT-CM-1"/>
+          <class refId="Objets-connectés-et-IoT-TP-1"/>
+          <class refId="Sécurité-et-réseaux-CM-1"/>
+          <class refId="Sécurité-et-réseaux-TD-1"/>
+          <class refId="Sécurité-et-réseaux-TP-1"/>
+          <class refId="Sécurité-et-réseaux-CC-1"/>
+          <class refId="Technologies-pro-émergentes-CM1-1"/>
+          <class refId="Technologies-pro-émergentes-CM2-1"/>
+          <class refId="Tests-CM-1"/>
+          <class refId="Tests-TP-1"/>
+    </classes>
+</group>
+
+<group id="m2-informatique-tp-ia" headCount="12">
+    <students>
+        <student refId="student-M2-Informatique-1"/>
+        <student refId="student-M2-Informatique-3"/>
+        <student refId="student-M2-Informatique-5"/>
+        <student refId="student-M2-Informatique-8"/>
+        <student refId="student-M2-Informatique-9"/>
+        <student refId="student-M2-Informatique-10"/>
+    </students>
+    <classes>
+          <!-- P1 -->
+          <class refId="Anglais-M2-TP-1B"/>
+          <class refId="Apprentissage-profond-CM-1"/>
+          <class refId="Apprentissage-profond-TD-1"/>
+          <class refId="Bases-de-données-avancées-CM-1"/>
+          <class refId="Bases-de-données-avancées-TD-1"/>
+          <class refId="Bases-de-données-avancées-TP-1B"/>
+          <class refId="Communication1-CM-1"/>
+          <class refId="Communication1-M2-TPB"/>
+          <class refId="Communication2-CM-1"/>
+          <class refId="Conférences-pro-et-science-long-CM-1"/>
+          <class refId="Conférences-pro-et-science-moyen-CM-1"/>
+          <class refId="Conférences-pro-et-science-THALES-CM-1"/>
+          <class refId="Conférences-pro-et-science-CAP-GEMINI-CM-1"/>
+          <class refId="Droit-M2-CM-1"/>
+          <class refId="Optimisation-appliquée-CM-1"/> 
+          <class refId="Optimisation-appliquée-TD-1"/>
+          <class refId="Optimisation-appliquée-TP-1"/>
+          <class refId="Programmation-parallèle-CM-1"/>
+          <class refId="Programmation-parallèle-TP-1B"/>
+          <class refId="Algorithmes-intelligents-CM-1"/> 
+          <class refId="Approches-exactes-de-résolution-CM-1"/> 
+          <class refId="Approches-exactes-de-résolution-CT-1"/> 
+          <class refId="Métaheuristiques-CM-1"/> 
+          <class refId="Représentation-des-connaissances-CM-1"/> 
+          <class refId="Systèmes-base-de-connaissances-CM-1"/> 
+          <class refId="Systèmes-base-de-connaissances-CT-1"/> 
+    </classes>
+</group>
+<!-- end file groups_m2-informatique.xml -->
+</groups>
+<classes>
+<class refId = "Architecture-distribuée-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Architecture-distribuée-TP-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "GNU-Linux-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "GNU-Linux-TP-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Anglais-M2-TP-1A">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Anglais-M2-TP-1B">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Apprentissage-profond-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Apprentissage-profond-TD-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Bases-de-données-avancées-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Bases-de-données-avancées-TD-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Bases-de-données-avancées-TP-1A">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Bases-de-données-avancées-TP-1B">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Communication1-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Communication2-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Communication1-M2-TPA">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Communication1-M2-TPB">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Conférences-pro-et-science-long-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Conférences-pro-et-science-moyen-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Conférences-pro-et-science-THALES-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Conférences-pro-et-science-CAP-GEMINI-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Droit-M2-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Optimisation-appliquée-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Optimisation-appliquée-TD-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Optimisation-appliquée-TP-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Programmation-parallèle-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Programmation-parallèle-TP-1A">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Programmation-parallèle-TP-1B">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Initiation-R-et-D-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Initiation-R-et-D-TP-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Objets-connectés-et-IoT-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Objets-connectés-et-IoT-TP-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Sécurité-et-réseaux-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Sécurité-et-réseaux-TP-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    <group refId="m2-informatique-tp-cd"/>
+    <group refId="m2-informatique-tp-ia"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Sécurité-et-réseaux-TD-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    <group refId="m2-informatique-tp-cd"/>
+    <group refId="m2-informatique-tp-ia"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Sécurité-et-réseaux-CC-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    <group refId="m2-informatique-tp-cd"/>
+    <group refId="m2-informatique-tp-ia"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Technologies-pro-émergentes-CM1-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    <group refId="m2-informatique-tp-cd"/>
+    <group refId="m2-informatique-tp-ia"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Technologies-pro-émergentes-CM2-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    <group refId="m2-informatique-tp-cd"/>
+    <group refId="m2-informatique-tp-ia"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Tests-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    <group refId="m2-informatique-tp-cd"/>
+    <group refId="m2-informatique-tp-ia"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Tests-TP-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    <group refId="m2-informatique-tp-cd"/>
+    <group refId="m2-informatique-tp-ia"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Algorithmes-intelligents-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    <group refId="m2-informatique-tp-cd"/>
+    <group refId="m2-informatique-tp-ia"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Approches-exactes-de-résolution-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    <group refId="m2-informatique-tp-cd"/>
+    <group refId="m2-informatique-tp-ia"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Approches-exactes-de-résolution-CT-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    <group refId="m2-informatique-tp-cd"/>
+    <group refId="m2-informatique-tp-ia"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Métaheuristiques-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    <group refId="m2-informatique-tp-cd"/>
+    <group refId="m2-informatique-tp-ia"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Représentation-des-connaissances-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    <group refId="m2-informatique-tp-cd"/>
+    <group refId="m2-informatique-tp-ia"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Systèmes-base-de-connaissances-CM-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    <group refId="m2-informatique-tp-cd"/>
+    <group refId="m2-informatique-tp-ia"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+<class refId = "Systèmes-base-de-connaissances-CT-1">
+    <groups>
+    <group refId="m2-informatique-tp-cd-alternant"/>
+    <group refId="m2-informatique-tp-cd"/>
+    <group refId="m2-informatique-tp-ia"/>
+    </groups>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+</class>
+</classes>
+<sessions>
+<session rank= "1" class="Architecture-distribuée-CM-1">
+    <startingSlot dailySlot="840" day="4" week="1" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+</session>
+<session rank= "2" class="Architecture-distribuée-CM-1">
+    <startingSlot dailySlot="840" day="4" week="2" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+</session>
+<session rank= "3" class="Architecture-distribuée-CM-1">
+    <startingSlot dailySlot="840" day="4" week="3" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+</session>
+<session rank= "4" class="Architecture-distribuée-CM-1">
+    <startingSlot dailySlot="840" day="4" week="4" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+</session>
+<session rank= "5" class="Architecture-distribuée-CM-1">
+    <startingSlot dailySlot="840" day="4" week="6" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+</session>
+<session rank= "1" class="Architecture-distribuée-TP-1">
+    <startingSlot dailySlot="480" day="5" week="3" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+</session>
+<session rank= "2" class="Architecture-distribuée-TP-1">
+    <startingSlot dailySlot="480" day="5" week="4" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+</session>
+<session rank= "3" class="Architecture-distribuée-TP-1">
+    <startingSlot dailySlot="840" day="4" week="5" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+</session>
+<session rank= "4" class="Architecture-distribuée-TP-1">
+    <startingSlot dailySlot="480" day="5" week="5" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DIGUEZ Martin"/>
+    </teachers>
+</session>
+<session rank= "1" class="GNU-Linux-CM-1">
+    <startingSlot dailySlot="480" day="1" week="19" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LEGEAY Marc"/>
+    </teachers>
+</session>
+<session rank= "2" class="GNU-Linux-CM-1">
+    <startingSlot dailySlot="840" day="1" week="19" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LEGEAY Marc"/>
+    </teachers>
+</session>
+<session rank= "3" class="GNU-Linux-CM-1">
+    <startingSlot dailySlot="480" day="1" week="20" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LEGEAY Marc"/>
+    </teachers>
+</session>
+<session rank= "4" class="GNU-Linux-CM-1">
+    <startingSlot dailySlot="840" day="1" week="20" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LEGEAY Marc"/>
+    </teachers>
+</session>
+<session rank= "5" class="GNU-Linux-CM-1">
+    <startingSlot dailySlot="480" day="1" week="21" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LEGEAY Marc"/>
+    </teachers>
+</session>
+<session rank= "1" class="GNU-Linux-TP-1">
+    <startingSlot dailySlot="840" day="1" week="21" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LEGEAY Marc"/>
+    </teachers>
+</session>
+<session rank= "2" class="GNU-Linux-TP-1">
+    <startingSlot dailySlot="840" day="1" week="22" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LEGEAY Marc"/>
+    </teachers>
+</session>
+<session rank= "3" class="GNU-Linux-TP-1">
+    <startingSlot dailySlot="840" day="1" week="23" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LEGEAY Marc"/>
+    </teachers>
+</session>
+<session rank= "1" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="2" week="1" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "2" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="1" week="2" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "3" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="1" week="3" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "4" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="1" week="4" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "5" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="1" week="5" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "6" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="1" week="6" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "7" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="1" week="9" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "8" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="1" week="10" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "9" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="1" week="11" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "10" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="1" week="12" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "11" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="1" week="13" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "12" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="1" week="14" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "13" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="1" week="18" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "14" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="1" week="19" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "15" class="Anglais-M2-TP-1A">
+    <startingSlot dailySlot="750" day="1" week="20" />
+    <rooms>
+        <room refId="A116"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "1" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="840" day="2" week="1" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "2" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="750" day="1" week="2" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "3" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="750" day="1" week="3" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "4" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="750" day="1" week="4" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "5" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="750" day="1" week="5" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "6" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="750" day="1" week="6" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "7" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="750" day="1" week="9" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "8" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="750" day="1" week="10" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "9" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="750" day="1" week="11" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "10" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="750" day="1" week="12" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "11" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="750" day="1" week="13" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "12" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="750" day="1" week="14" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "13" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="750" day="1" week="18" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "14" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="750" day="1" week="19" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "15" class="Anglais-M2-TP-1B">
+    <startingSlot dailySlot="750" day="1" week="20" />
+    <rooms>
+        <room refId="A117"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MENAN Bruno"/>
+    </teachers>
+</session>
+<session rank= "1" class="Apprentissage-profond-CM-1">
+    <startingSlot dailySlot="840" day="1" week="11" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "2" class="Apprentissage-profond-CM-1">
+    <startingSlot dailySlot="840" day="1" week="12" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "3" class="Apprentissage-profond-CM-1">
+    <startingSlot dailySlot="840" day="1" week="13" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "4" class="Apprentissage-profond-CM-1">
+    <startingSlot dailySlot="840" day="1" week="14" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "5" class="Apprentissage-profond-CM-1">
+    <startingSlot dailySlot="840" day="1" week="18" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "1" class="Apprentissage-profond-TD-1">
+    <startingSlot dailySlot="540" day="2" week="11" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "2" class="Apprentissage-profond-TD-1">
+    <startingSlot dailySlot="540" day="2" week="12" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "3" class="Apprentissage-profond-TD-1">
+    <startingSlot dailySlot="540" day="2" week="13" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "4" class="Apprentissage-profond-TD-1">
+    <startingSlot dailySlot="540" day="2" week="14" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "5" class="Apprentissage-profond-TD-1">
+    <startingSlot dailySlot="540" day="2" week="18" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "1" class="Bases-de-données-avancées-CM-1">
+    <startingSlot dailySlot="540" day="2" week="1" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GENEST David"/>
+    </teachers>
+</session>
+<session rank= "2" class="Bases-de-données-avancées-CM-1">
+    <startingSlot dailySlot="840" day="1" week="1" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "3" class="Bases-de-données-avancées-CM-1">
+    <startingSlot dailySlot="540" day="1" week="3" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "4" class="Bases-de-données-avancées-CM-1">
+    <startingSlot dailySlot="840" day="1" week="3" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "5" class="Bases-de-données-avancées-CM-1">
+    <startingSlot dailySlot="540" day="1" week="4" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "6" class="Bases-de-données-avancées-CM-1">
+    <startingSlot dailySlot="840" day="1" week="4" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "1" class="Bases-de-données-avancées-TD-1">
+    <startingSlot dailySlot="840" day="2" week="1" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "2" class="Bases-de-données-avancées-TD-1">
+    <startingSlot dailySlot="540" day="2" week="2" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "3" class="Bases-de-données-avancées-TD-1">
+    <startingSlot dailySlot="540" day="2" week="3" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "4" class="Bases-de-données-avancées-TD-1">
+    <startingSlot dailySlot="840" day="2" week="3" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "1" class="Bases-de-données-avancées-TP-1A">
+    <startingSlot dailySlot="540" day="3" week="3" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GENEST David"/>
+    </teachers>
+</session>
+<session rank= "1" class="Bases-de-données-avancées-TP-1B">
+    <startingSlot dailySlot="840" day="3" week="3" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GENEST David"/>
+    </teachers>
+</session>
+<session rank= "1" class="Communication1-CM-1">
+    <startingSlot dailySlot="840" day="5" week="10" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MAILLET Chloé"/>
+    </teachers>
+</session>
+<session rank= "2" class="Communication1-CM-1">
+    <startingSlot dailySlot="840" day="5" week="11" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MAILLET Chloé"/>
+    </teachers>
+</session>
+<session rank= "3" class="Communication1-CM-1">
+    <startingSlot dailySlot="840" day="5" week="12" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MAILLET Chloé"/>
+    </teachers>
+</session>
+<session rank= "4" class="Communication1-CM-1">
+    <startingSlot dailySlot="840" day="5" week="13" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MAILLET Chloé"/>
+    </teachers>
+</session>
+<session rank= "1" class="Communication2-CM-1">
+    <startingSlot dailySlot="480" day="1" week="11" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GRIMAULT Virginie"/>
+    </teachers>
+</session>
+<session rank= "2" class="Communication2-CM-1">
+    <startingSlot dailySlot="480" day="1" week="12" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GRIMAULT Virginie"/>
+    </teachers>
+</session>
+<session rank= "1" class="Communication1-M2-TPA">
+    <startingSlot dailySlot="480" day="1" week="13" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MAILLET Chloé"/>
+    </teachers>
+</session>
+<session rank= "1" class="Communication1-M2-TPB">
+    <startingSlot dailySlot="840" day="4" week="13" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MAILLET Chloé"/>
+    </teachers>
+</session>
+<session rank= "1" class="Conférences-pro-et-science-long-CM-1">
+    <startingSlot dailySlot="480" day="3" week="10" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="Intervenant"/>
+    </teachers>
+</session>
+<session rank= "2" class="Conférences-pro-et-science-long-CM-1">
+    <startingSlot dailySlot="840" day="3" week="10" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="Intervenant"/>
+    </teachers>
+</session>
+<session rank= "1" class="Conférences-pro-et-science-moyen-CM-1">
+    <startingSlot dailySlot="480" day="5" week="13" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="BLOT"/>
+    </teachers>
+</session>
+<session rank= "1" class="Conférences-pro-et-science-THALES-CM-1">
+    <startingSlot dailySlot="480" day="1" week="14" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="Intervenant Thales"/>
+    </teachers>
+</session>
+<session rank= "1" class="Conférences-pro-et-science-CAP-GEMINI-CM-1">
+    <startingSlot dailySlot="480" day="5" week="14" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="Intervenant CapGemini"/>
+    </teachers>
+</session>
+<session rank= "1" class="Droit-M2-CM-1">
+    <startingSlot dailySlot="480" day="1" week="2" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DUMONT Ingrid"/>
+    </teachers>
+</session>
+<session rank= "2" class="Droit-M2-CM-1">
+    <startingSlot dailySlot="480" day="1" week="5" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DUMONT Ingrid"/>
+    </teachers>
+</session>
+<session rank= "3" class="Droit-M2-CM-1">
+    <startingSlot dailySlot="480" day="1" week="10" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DUMONT Ingrid"/>
+    </teachers>
+</session>
+<session rank= "1" class="Optimisation-appliquée-CM-1">
+    <startingSlot dailySlot="840" day="2" week="1" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LESAINT David"/>
+    </teachers>
+</session>
+<session rank= "2" class="Optimisation-appliquée-CM-1">
+    <startingSlot dailySlot="840" day="2" week="2" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LESAINT David"/>
+    </teachers>
+</session>
+<session rank= "1" class="Optimisation-appliquée-TD-1">
+    <startingSlot dailySlot="480" day="4" week="2" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LESAINT David"/>
+    </teachers>
+</session>
+<session rank= "2" class="Optimisation-appliquée-TD-1">
+    <startingSlot dailySlot="480" day="4" week="3" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LESAINT David"/>
+    </teachers>
+</session>
+<session rank= "1" class="Optimisation-appliquée-TP-1">
+    <startingSlot dailySlot="840" day="1" week="5" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="SAUBION Frédéric"/>
+    </teachers>
+</session>
+<session rank= "2" class="Optimisation-appliquée-TP-1">
+    <startingSlot dailySlot="840" day="1" week="6" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="SAUBION Frédéric"/>
+    </teachers>
+</session>
+<session rank= "3" class="Optimisation-appliquée-TP-1">
+    <startingSlot dailySlot="840" day="1" week="9" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="SAUBION Frédéric"/>
+    </teachers>
+</session>
+<session rank= "4" class="Optimisation-appliquée-TP-1">
+    <startingSlot dailySlot="840" day="1" week="10" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="SAUBION Frédéric"/>
+    </teachers>
+</session>
+<session rank= "1" class="Programmation-parallèle-CM-1">
+    <startingSlot dailySlot="840" day="2" week="11" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "2" class="Programmation-parallèle-CM-1">
+    <startingSlot dailySlot="840" day="2" week="12" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "3" class="Programmation-parallèle-CM-1">
+    <startingSlot dailySlot="840" day="2" week="13" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "4" class="Programmation-parallèle-CM-1">
+    <startingSlot dailySlot="840" day="2" week="14" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "5" class="Programmation-parallèle-CM-1">
+    <startingSlot dailySlot="840" day="2" week="18" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "6" class="Programmation-parallèle-CM-1">
+    <startingSlot dailySlot="840" day="2" week="20" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "7" class="Programmation-parallèle-CM-1">
+    <startingSlot dailySlot="840" day="2" week="21" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "8" class="Programmation-parallèle-CM-1">
+    <startingSlot dailySlot="840" day="2" week="22" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "9" class="Programmation-parallèle-CM-1">
+    <startingSlot dailySlot="840" day="2" week="23" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "1" class="Programmation-parallèle-TP-1A">
+    <startingSlot dailySlot="540" day="3" week="18" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "2" class="Programmation-parallèle-TP-1A">
+    <startingSlot dailySlot="540" day="3" week="19" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "3" class="Programmation-parallèle-TP-1A">
+    <startingSlot dailySlot="540" day="3" week="20" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "4" class="Programmation-parallèle-TP-1A">
+    <startingSlot dailySlot="540" day="3" week="21" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "1" class="Programmation-parallèle-TP-1B">
+    <startingSlot dailySlot="840" day="3" week="18" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "2" class="Programmation-parallèle-TP-1B">
+    <startingSlot dailySlot="840" day="3" week="19" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "3" class="Programmation-parallèle-TP-1B">
+    <startingSlot dailySlot="840" day="3" week="20" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "4" class="Programmation-parallèle-TP-1B">
+    <startingSlot dailySlot="840" day="3" week="21" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="RICHER Jean-Michel"/>
+    </teachers>
+</session>
+<session rank= "1" class="Initiation-R-et-D-CM-1">
+    <startingSlot dailySlot="480" day="1" week="18" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAO Jin-Kao"/>
+    </teachers>
+</session>
+<session rank= "2" class="Initiation-R-et-D-CM-1">
+    <startingSlot dailySlot="480" day="2" week="19" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DUPIN Nicolas"/>
+    </teachers>
+</session>
+<session rank= "3" class="Initiation-R-et-D-CM-1">
+    <startingSlot dailySlot="480" day="2" week="20" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DUPIN Nicolas"/>
+    </teachers>
+</session>
+<session rank= "4" class="Initiation-R-et-D-CM-1">
+    <startingSlot dailySlot="480" day="2" week="21" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DUPIN Nicolas"/>
+    </teachers>
+</session>
+<session rank= "5" class="Initiation-R-et-D-CM-1">
+    <startingSlot dailySlot="480" day="1" week="22" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "1" class="Initiation-R-et-D-TP-1">
+    <startingSlot dailySlot="840" day="2" week="19" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAO Jin-Kao"/>
+    </teachers>
+</session>
+<session rank= "1" class="Objets-connectés-et-IoT-CM-1">
+    <startingSlot dailySlot="480" day="3" week="1" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GARREAU Fabien"/>
+    </teachers>
+</session>
+<session rank= "2" class="Objets-connectés-et-IoT-CM-1">
+    <startingSlot dailySlot="480" day="3" week="2" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GARREAU Fabien"/>
+    </teachers>
+</session>
+<session rank= "3" class="Objets-connectés-et-IoT-CM-1">
+    <startingSlot dailySlot="480" day="3" week="4" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GARREAU Fabien"/>
+    </teachers>
+</session>
+<session rank= "4" class="Objets-connectés-et-IoT-CM-1">
+    <startingSlot dailySlot="480" day="3" week="5" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GARREAU Fabien"/>
+    </teachers>
+</session>
+<session rank= "5" class="Objets-connectés-et-IoT-CM-1">
+    <startingSlot dailySlot="480" day="3" week="6" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GARREAU Fabien"/>
+    </teachers>
+</session>
+<session rank= "1" class="Objets-connectés-et-IoT-TP-1">
+    <startingSlot dailySlot="480" day="3" week="9" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GARREAU Fabien"/>
+    </teachers>
+</session>
+<session rank= "2" class="Objets-connectés-et-IoT-TP-1">
+    <startingSlot dailySlot="480" day="3" week="11" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GARREAU Fabien"/>
+    </teachers>
+</session>
+<session rank= "3" class="Objets-connectés-et-IoT-TP-1">
+    <startingSlot dailySlot="480" day="3" week="12" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GARREAU Fabien"/>
+    </teachers>
+</session>
+<session rank= "4" class="Objets-connectés-et-IoT-TP-1">
+    <startingSlot dailySlot="480" day="3" week="13" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GARREAU Fabien"/>
+    </teachers>
+</session>
+<session rank= "1" class="Sécurité-et-réseaux-CM-1">
+    <startingSlot dailySlot="480" day="4" week="10" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAMIEZ Jean-Phillipe"/>
+    </teachers>
+</session>
+<session rank= "2" class="Sécurité-et-réseaux-CM-1">
+    <startingSlot dailySlot="480" day="4" week="11" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAMIEZ Jean-Phillipe"/>
+    </teachers>
+</session>
+<session rank= "3" class="Sécurité-et-réseaux-CM-1">
+    <startingSlot dailySlot="480" day="4" week="12" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAMIEZ Jean-Phillipe"/>
+    </teachers>
+</session>
+<session rank= "4" class="Sécurité-et-réseaux-CM-1">
+    <startingSlot dailySlot="480" day="4" week="13" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAMIEZ Jean-Phillipe"/>
+    </teachers>
+</session>
+<session rank= "5" class="Sécurité-et-réseaux-CM-1">
+    <startingSlot dailySlot="480" day="4" week="14" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAMIEZ Jean-Phillipe"/>
+    </teachers>
+</session>
+<session rank= "6" class="Sécurité-et-réseaux-CM-1">
+    <startingSlot dailySlot="480" day="4" week="18" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAMIEZ Jean-Phillipe"/>
+    </teachers>
+</session>
+<session rank= "1" class="Sécurité-et-réseaux-TP-1">
+    <startingSlot dailySlot="840" day="4" week="11" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAMIEZ Jean-Phillipe"/>
+    </teachers>
+</session>
+<session rank= "2" class="Sécurité-et-réseaux-TP-1">
+    <startingSlot dailySlot="480" day="5" week="11" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAMIEZ Jean-Phillipe"/>
+    </teachers>
+</session>
+<session rank= "1" class="Sécurité-et-réseaux-TD-1">
+    <startingSlot dailySlot="840" day="4" week="12" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAMIEZ Jean-Phillipe"/>
+    </teachers>
+</session>
+<session rank= "1" class="Sécurité-et-réseaux-CC-1">
+    <startingSlot dailySlot="840" day="4" week="18" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAMIEZ Jean-Phillipe"/>
+    </teachers>
+</session>
+<session rank= "1" class="Technologies-pro-émergentes-CM1-1">
+    <startingSlot dailySlot="840" day="3" week="1" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GUILLMER Y"/>
+    </teachers>
+</session>
+<session rank= "2" class="Technologies-pro-émergentes-CM1-1">
+    <startingSlot dailySlot="840" day="3" week="2" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GUILLMER Y"/>
+    </teachers>
+</session>
+<session rank= "3" class="Technologies-pro-émergentes-CM1-1">
+    <startingSlot dailySlot="840" day="3" week="4" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GUILLMER Y"/>
+    </teachers>
+</session>
+<session rank= "1" class="Technologies-pro-émergentes-CM2-1">
+    <startingSlot dailySlot="840" day="3" week="5" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DUPIN Nicolas"/>
+    </teachers>
+</session>
+<session rank= "2" class="Technologies-pro-émergentes-CM2-1">
+    <startingSlot dailySlot="840" day="3" week="6" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="DUPIN Nicolas"/>
+    </teachers>
+</session>
+<session rank= "1" class="Tests-CM-1">
+    <startingSlot dailySlot="840" day="5" week="1" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "2" class="Tests-CM-1">
+    <startingSlot dailySlot="840" day="5" week="5" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "3" class="Tests-CM-1">
+    <startingSlot dailySlot="840" day="5" week="6" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "1" class="Tests-TP-1">
+    <startingSlot dailySlot="840" day="5" week="2" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "2" class="Tests-TP-1">
+    <startingSlot dailySlot="840" day="5" week="3" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "3" class="Tests-TP-1">
+    <startingSlot dailySlot="840" day="5" week="4" />
+    <rooms>
+        <room refId="H006"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LAMPRIER Sylvain"/>
+    </teachers>
+</session>
+<session rank= "1" class="Algorithmes-intelligents-CM-1">
+    <startingSlot dailySlot="480" day="3" week="11" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="SAUBION Frédéric"/>
+    </teachers>
+</session>
+<session rank= "2" class="Algorithmes-intelligents-CM-1">
+    <startingSlot dailySlot="480" day="3" week="12" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="SAUBION Frédéric"/>
+    </teachers>
+</session>
+<session rank= "3" class="Algorithmes-intelligents-CM-1">
+    <startingSlot dailySlot="480" day="3" week="13" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="SAUBION Frédéric"/>
+    </teachers>
+</session>
+<session rank= "4" class="Algorithmes-intelligents-CM-1">
+    <startingSlot dailySlot="480" day="3" week="14" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="SAUBION Frédéric"/>
+    </teachers>
+</session>
+<session rank= "5" class="Algorithmes-intelligents-CM-1">
+    <startingSlot dailySlot="480" day="3" week="18" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="SAUBION Frédéric"/>
+    </teachers>
+</session>
+<session rank= "6" class="Algorithmes-intelligents-CM-1">
+    <startingSlot dailySlot="480" day="3" week="19" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LARDEUX Frédéric"/>
+    </teachers>
+</session>
+<session rank= "7" class="Algorithmes-intelligents-CM-1">
+    <startingSlot dailySlot="480" day="3" week="20" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LARDEUX Frédéric"/>
+    </teachers>
+</session>
+<session rank= "8" class="Algorithmes-intelligents-CM-1">
+    <startingSlot dailySlot="480" day="3" week="21" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LARDEUX Frédéric"/>
+    </teachers>
+</session>
+<session rank= "9" class="Algorithmes-intelligents-CM-1">
+    <startingSlot dailySlot="480" day="3" week="22" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LARDEUX Frédéric"/>
+    </teachers>
+</session>
+<session rank= "10" class="Algorithmes-intelligents-CM-1">
+    <startingSlot dailySlot="480" day="3" week="23" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LARDEUX Frédéric"/>
+    </teachers>
+</session>
+<session rank= "1" class="Approches-exactes-de-résolution-CM-1">
+    <startingSlot dailySlot="480" day="3" week="1" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LESAINT David"/>
+    </teachers>
+</session>
+<session rank= "2" class="Approches-exactes-de-résolution-CM-1">
+    <startingSlot dailySlot="480" day="3" week="2" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LESAINT David"/>
+    </teachers>
+</session>
+<session rank= "3" class="Approches-exactes-de-résolution-CM-1">
+    <startingSlot dailySlot="480" day="3" week="3" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LESAINT David"/>
+    </teachers>
+</session>
+<session rank= "4" class="Approches-exactes-de-résolution-CM-1">
+    <startingSlot dailySlot="480" day="3" week="4" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LESAINT David"/>
+    </teachers>
+</session>
+<session rank= "5" class="Approches-exactes-de-résolution-CM-1">
+    <startingSlot dailySlot="480" day="3" week="5" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LESAINT David"/>
+    </teachers>
+</session>
+<session rank= "6" class="Approches-exactes-de-résolution-CM-1">
+    <startingSlot dailySlot="480" day="2" week="19" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MONFROY Eric"/>
+    </teachers>
+</session>
+<session rank= "7" class="Approches-exactes-de-résolution-CM-1">
+    <startingSlot dailySlot="480" day="2" week="20" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MONFROY Eric"/>
+    </teachers>
+</session>
+<session rank= "8" class="Approches-exactes-de-résolution-CM-1">
+    <startingSlot dailySlot="480" day="2" week="21" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MONFROY Eric"/>
+    </teachers>
+</session>
+<session rank= "9" class="Approches-exactes-de-résolution-CM-1">
+    <startingSlot dailySlot="480" day="2" week="22" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MONFROY Eric"/>
+    </teachers>
+</session>
+<session rank= "10" class="Approches-exactes-de-résolution-CM-1">
+    <startingSlot dailySlot="480" day="2" week="23" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="MONFROY Eric"/>
+    </teachers>
+</session>
+<session rank= "1" class="Approches-exactes-de-résolution-CT-1">
+    <startingSlot dailySlot="480" day="3" week="6" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LESAINT David"/>
+    </teachers>
+</session>
+<session rank= "1" class="Métaheuristiques-CM-1">
+    <startingSlot dailySlot="840" day="4" week="2" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAO Jin-Kao"/>
+    </teachers>
+</session>
+<session rank= "2" class="Métaheuristiques-CM-1">
+    <startingSlot dailySlot="840" day="4" week="3" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAO Jin-Kao"/>
+    </teachers>
+</session>
+<session rank= "3" class="Métaheuristiques-CM-1">
+    <startingSlot dailySlot="840" day="4" week="4" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAO Jin-Kao"/>
+    </teachers>
+</session>
+<session rank= "4" class="Métaheuristiques-CM-1">
+    <startingSlot dailySlot="840" day="4" week="5" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAO Jin-Kao"/>
+    </teachers>
+</session>
+<session rank= "5" class="Métaheuristiques-CM-1">
+    <startingSlot dailySlot="840" day="4" week="6" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAO Jin-Kao"/>
+    </teachers>
+</session>
+<session rank= "6" class="Métaheuristiques-CM-1">
+    <startingSlot dailySlot="840" day="4" week="9" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAO Jin-Kao"/>
+    </teachers>
+</session>
+<session rank= "7" class="Métaheuristiques-CM-1">
+    <startingSlot dailySlot="840" day="4" week="10" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAO Jin-Kao"/>
+    </teachers>
+</session>
+<session rank= "8" class="Métaheuristiques-CM-1">
+    <startingSlot dailySlot="840" day="4" week="11" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAO Jin-Kao"/>
+    </teachers>
+</session>
+<session rank= "9" class="Métaheuristiques-CM-1">
+    <startingSlot dailySlot="840" day="4" week="12" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAO Jin-Kao"/>
+    </teachers>
+</session>
+<session rank= "10" class="Métaheuristiques-CM-1">
+    <startingSlot dailySlot="840" day="4" week="14" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="HAO Jin-Kao"/>
+    </teachers>
+</session>
+<session rank= "1" class="Représentation-des-connaissances-CM-1">
+    <startingSlot dailySlot="480" day="1" week="19" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LEFEVRE Claire"/>
+    </teachers>
+</session>
+<session rank= "2" class="Représentation-des-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="1" week="19" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LEFEVRE Claire"/>
+    </teachers>
+</session>
+<session rank= "3" class="Représentation-des-connaissances-CM-1">
+    <startingSlot dailySlot="480" day="1" week="20" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LEFEVRE Claire"/>
+    </teachers>
+</session>
+<session rank= "4" class="Représentation-des-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="1" week="20" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GARCIA Laurent"/>
+    </teachers>
+</session>
+<session rank= "5" class="Représentation-des-connaissances-CM-1">
+    <startingSlot dailySlot="480" day="1" week="21" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="GARCIA Laurent"/>
+    </teachers>
+</session>
+<session rank= "6" class="Représentation-des-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="1" week="21" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="STEPHAN Igor"/>
+    </teachers>
+</session>
+<session rank= "7" class="Représentation-des-connaissances-CM-1">
+    <startingSlot dailySlot="480" day="1" week="22" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="STEPHAN Igor"/>
+    </teachers>
+</session>
+<session rank= "8" class="Représentation-des-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="1" week="22" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="STEPHAN Igor"/>
+    </teachers>
+</session>
+<session rank= "9" class="Représentation-des-connaissances-CM-1">
+    <startingSlot dailySlot="480" day="1" week="23" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="STEPHAN Igor"/>
+    </teachers>
+</session>
+<session rank= "10" class="Représentation-des-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="1" week="23" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="AMGHAR Tassadit"/>
+    </teachers>
+</session>
+<session rank= "11" class="Représentation-des-connaissances-CM-1">
+    <startingSlot dailySlot="480" day="1" week="24" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="AMGHAR Tassadit"/>
+    </teachers>
+</session>
+<session rank= "12" class="Représentation-des-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="1" week="24" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="AMGHAR Tassadit"/>
+    </teachers>
+</session>
+<session rank= "1" class="Systèmes-base-de-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="3" week="1" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "2" class="Systèmes-base-de-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="3" week="2" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "3" class="Systèmes-base-de-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="3" week="4" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "4" class="Systèmes-base-de-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="3" week="5" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "5" class="Systèmes-base-de-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="3" week="6" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "6" class="Systèmes-base-de-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="3" week="9" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "7" class="Systèmes-base-de-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="3" week="11" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "8" class="Systèmes-base-de-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="3" week="12" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "9" class="Systèmes-base-de-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="3" week="13" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "10" class="Systèmes-base-de-connaissances-CM-1">
+    <startingSlot dailySlot="840" day="3" week="14" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+<session rank= "1" class="Systèmes-base-de-connaissances-CT-1">
+    <startingSlot dailySlot="480" day="4" week="14" />
+    <rooms>
+        <room refId="H005"/>
+    </rooms>
+    <teachers>
+        <teacher refId="LOISEAU Stephane"/>
+    </teachers>
+</session>
+</sessions>
+
+</solution>
+</timetabling>

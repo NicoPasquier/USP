@@ -1,0 +1,167 @@
+<!-- 
+<calendar>
+    <startingYear>2023</startingYear>
+    <weeks>1-34</weeks>
+    <weekDays>1-5</weekDays>
+</calendar>
+ -->
+<timetabling xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="usp_timetabling_v1_2.xsd" name="test" nrWeeks="2" nrDaysPerWeek="5" nrSlotsPerDay="1440">
+
+    <rooms>
+        <room id="room-1" capacity="50" label=""/>
+    </rooms>
+
+    <teachers>
+        <teacher label="" id="teacher-1"/>
+    </teachers>
+
+    <courses>
+        <course id="course-1" label="">
+            <part id="course-1-CM" nrSessions="1" label="">
+                <classes maxHeadCount="80">
+                    <class id="course-1-CM-1"/>
+                </classes>
+                <allowedSlots sessionLength="80">
+                    <dailySlots>480,540,660,750,840,930,1020,1110</dailySlots>
+                    <days>1-5</days>
+                    <weeks>1-2</weeks>
+                </allowedSlots>
+                <allowedRooms sessionRooms="single">
+                    <room refId="room-1"/>
+                </allowedRooms>
+                <allowedTeachers sessionTeachers="1">
+                    <teacher refId="teacher-1" nrSessions="1"/>
+                </allowedTeachers>
+            </part>
+        </course>
+        <course id="course-1" label="">
+            <part id="course-1-TP" nrSessions="3" label="">
+                <classes maxHeadCount="80">
+                    <class id="course-1-TP-1"/>
+                </classes>
+                <allowedSlots sessionLength="80">
+                    <dailySlots>480,540,660,750,840,930,1020,1110</dailySlots>
+                    <days>1-5</days>
+                    <weeks>1-2</weeks>
+                </allowedSlots>
+                <allowedRooms sessionRooms="single">
+                    <room refId="room-1"/>
+                </allowedRooms>
+                <allowedTeachers sessionTeachers="1">
+                    <teacher refId="teacher-1" nrSessions="3"/>
+                </allowedTeachers>
+            </part>
+        </course>
+    </courses>
+
+    <students>
+        <student id="student-1" label="">
+            <courses>
+                <course refId="course-1"/>
+            </courses>
+        </student>
+    </students>
+
+    <rules>
+        <rule>
+            <selector generator="(class[id='course-1-CM-1'],*)" filters=""/>
+            <constraint name="assign_slot" type="hard">
+                <parameters>
+                    <parameter name="slot">480</parameter>
+                </parameters>
+            </constraint>
+        </rule>
+        <rule>
+            <selector generator="(class[id='course-1-CM-1'],{1})" filters=""/>
+            <selector generator="(class[id='course-1-TP-1'],*)" filters=""/>
+            <constraint name="sequenced" type="hard"/>
+        </rule>
+        <rule>
+            <selector generator="(class,*)" filters="part[id='course-1-TP']"/>
+            <constraint name="periodic" type="hard">
+                <parameters>
+                    <parameter name="value">1</parameter>
+                    <parameter name="unit">day</parameter>
+                </parameters>
+            </constraint>
+        </rule>
+    </rules>
+
+    <solution>
+        <groups>
+            <group id="group-1" headCount="1">
+                <students>
+                    <student refId="student-1"/>
+                </students>
+                <classes>
+                    <class refId="course-1-CM-1"/>
+                    <class refId="course-1-TP-1"/>
+                </classes>
+            </group>
+        </groups>
+
+<classes>
+<class refId = "course-1-CM-1">
+    <groups>
+    <group refId="group-1"/>
+    </groups>
+    <teachers>
+        <teacher refId="teacher-1"/>
+    </teachers>
+    <rooms>
+        <room refId="room-1"/>
+    </rooms>
+</class>
+<class refId = "course-1-TP-1">
+    <groups>
+    <group refId="group-1"/>
+    </groups>
+    <teachers>
+        <teacher refId="teacher-1"/>
+    </teachers>
+    <rooms>
+        <room refId="room-1"/>
+    </rooms>
+</class>
+</classes>
+<sessions>
+<session rank= "1" class="course-1-CM-1">
+    <startingSlot dailySlot="480" day="1" week="1" />
+    <rooms>
+        <room refId="room-1"/>
+    </rooms>
+    <teachers>
+        <teacher refId="teacher-1"/>
+    </teachers>
+</session>
+<session rank= "1" class="course-1-TP-1">
+    <startingSlot dailySlot="660" day="2" week="1" />
+    <rooms>
+        <room refId="room-1"/>
+    </rooms>
+    <teachers>
+        <teacher refId="teacher-1"/>
+    </teachers>
+</session>
+<session rank= "2" class="course-1-TP-1">
+    <startingSlot dailySlot="660" day="3" week="1" />
+    <rooms>
+        <room refId="room-1"/>
+    </rooms>
+    <teachers>
+        <teacher refId="teacher-1"/>
+    </teachers>
+</session>
+<session rank= "3" class="course-1-TP-1">
+    <startingSlot dailySlot="660" day="4" week="1" />
+    <rooms>
+        <room refId="room-1"/>
+    </rooms>
+    <teachers>
+        <teacher refId="teacher-1"/>
+    </teachers>
+</session>
+</sessions>
+
+</solution>
+</timetabling>
